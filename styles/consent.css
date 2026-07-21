@@ -160,6 +160,8 @@ html.pm-consent-lock {
     width: min(500px, 100%);
     max-height: calc(100dvh - 40px);
     overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
     padding: clamp(24px, 3vw, 34px);
     border: 1px solid rgba(255, 255, 255, 0.11);
     border-radius: 22px;
@@ -344,8 +346,89 @@ html.pm-consent-lock {
 
 /* ═══ Motion / responsive ═══════════════════════════════════════════ */
 @media (max-width: 520px) {
+    .pm-consent-modal {
+        align-items: flex-end;
+        padding: 10px 10px max(10px, env(safe-area-inset-bottom));
+    }
+
+    .pm-consent-panel {
+        width: 100%;
+        max-height: calc(100dvh - 20px);
+        padding: 24px 18px calc(18px + env(safe-area-inset-bottom));
+        border-radius: 20px 20px 14px 14px;
+        transform: translateY(24px);
+    }
+
+    .pm-panel-close {
+        top: 12px;
+        right: 12px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .pm-panel-title {
+        padding-right: 42px;
+        font-size: 24px;
+        line-height: 1.1;
+    }
+
+    .pm-panel-intro {
+        max-width: 38ch;
+        font-size: 13px;
+        line-height: 1.55;
+    }
+
     .pm-panel-actions {
         flex-direction: column;
+        gap: 8px;
+        margin-top: 18px;
+    }
+
+    .pm-panel-actions .pm-btn {
+        flex: none;
+        width: 100%;
+        min-height: 48px;
+    }
+
+    .pm-consent-manage {
+        min-height: 44px;
+        margin-top: 10px;
+        padding: 10px 8px;
+    }
+
+    .pm-details {
+        margin-top: 0;
+    }
+
+    .pm-opt {
+        gap: 12px;
+        padding: 14px 0;
+    }
+
+    .pm-opt-desc {
+        line-height: 1.45;
+    }
+
+    .pm-details .pm-panel-actions {
+        margin-top: 6px;
+    }
+
+    .pm-consent-fab {
+        left: 12px;
+        bottom: max(12px, env(safe-area-inset-bottom));
+        width: 44px;
+        height: 44px;
+    }
+}
+
+@media (max-width: 360px) {
+    .pm-consent-panel {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .pm-panel-intro {
+        font-size: 12.5px;
     }
 }
 
