@@ -1,4 +1,4 @@
-/* Inline script block 1 extracted from index.html */
+/* Inline script block 1 extracted from / */
 gsap.registerPlugin(ScrollTrigger);
 
 // ── Hero intro timeline ────────────────────────────────────────────────────
@@ -417,7 +417,7 @@ document.querySelectorAll(".faq-question").forEach((button) => {
     const SVC_DATA = [
         {
             title: "Growth Strategy",
-            url: "growth-strategy.html",
+            url: "/growth-strategy",
             image: "design_components/SVG - ABSTRACTS - 110 UNITS/21.svg",
             icon: "design_components/SVG - ABSTRACTS - 110 UNITS/35.svg",
             badge1: { num: "50+", lbl: "BRANDS<br>GROWN", icon: "design_components/SVG - ABSTRACTS - 110 UNITS/95.svg" },
@@ -425,7 +425,7 @@ document.querySelectorAll(".faq-question").forEach((button) => {
         },
         {
             title: "Algorithm Training",
-            url: "algorithm-training.html",
+            url: "/algorithm-training",
             image: "design_components/SVG - ABSTRACTS - 110 UNITS/64.svg",
             icon: "design_components/SVG - ABSTRACTS - 110 UNITS/10.svg",
             badge1: { num: "24/7", lbl: "REAL-TIME<br>SIGNALS", icon: "design_components/SVG - ABSTRACTS - 110 UNITS/108.svg" },
@@ -433,7 +433,7 @@ document.querySelectorAll(".faq-question").forEach((button) => {
         },
         {
             title: "Creative Strategy",
-            url: "creative-strategy.html",
+            url: "/creative-strategy",
             image: "design_components/SVG - ABSTRACTS - 110 UNITS/38.svg",
             icon: "design_components/SVG - ABSTRACTS - 110 UNITS/73.svg",
             badge1: { num: "+340%", lbl: "CTR<br>UPLIFT", icon: "design_components/SVG - ABSTRACTS - 110 UNITS/102.svg" },
@@ -441,7 +441,7 @@ document.querySelectorAll(".faq-question").forEach((button) => {
         },
         {
             title: "Media Buying",
-            url: "media-buying.html",
+            url: "/media-buying",
             image: "design_components/SVG - ABSTRACTS - 110 UNITS/10.svg",
             icon: "design_components/SVG - ABSTRACTS - 110 UNITS/64.svg",
             badge1: { num: "4.8×", lbl: "ROAS<br>AVERAGE", icon: "design_components/SVG - ABSTRACTS - 110 UNITS/81.svg" },
@@ -588,7 +588,7 @@ document.querySelectorAll(".faq-question").forEach((button) => {
     }, HOLD);
 }());
 
-/* Inline script block 2 extracted from index.html */
+/* Inline script block 2 extracted from / */
 if (typeof ScrollTrigger !== 'undefined') {
     // Mobile address-bar show/hide changes 100vh and constantly re-measures
     // pins, which can leave a pinned section overlapping its neighbours.

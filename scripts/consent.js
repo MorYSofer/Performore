@@ -131,7 +131,7 @@
                 '<div class="pm-consent-panel" role="document">' +
                     (blocking ? '' : '<button type="button" class="pm-panel-close" data-act="close" aria-label="Close">' + CLOSE_SVG + '</button>') +
                     '<h2 class="pm-panel-title">Cookies</h2>' +
-                    '<p class="pm-panel-intro">We use cookies to run this site, understand how it’s used, and measure our marketing. Choose “Accept all”, or pick what’s on. See our <a href="cookie-policy.html">Cookie Policy</a>.</p>' +
+                    '<p class="pm-panel-intro">We use cookies to run this site, understand how it’s used, and measure our marketing. Choose “Accept all”, or pick what’s on. See our <a href="/cookie-policy">Cookie Policy</a>.</p>' +
                     '<div class="pm-panel-actions pm-panel-actions--primary">' +
                         '<button type="button" class="pm-btn pm-btn-primary" data-act="all">Accept all</button>' +
                         '<button type="button" class="pm-btn pm-btn-ghost" data-act="essential">Essential only</button>' +
