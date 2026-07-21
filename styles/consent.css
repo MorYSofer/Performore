@@ -1,0 +1,362 @@
+/* ─── COOKIE CONSENT (Google Consent Mode v2) ───
+   Brand-matched to base.css tokens. Injected + toggled by scripts/consent.js.
+   z-index sits above the Cal.com floating embed. */
+
+.pm-consent-root {
+    --pm-ease: var(--ease-luxe, cubic-bezier(0.32, 0.72, 0, 1));
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Scroll lock while the modal is open (added to <html>). */
+html.pm-consent-lock {
+    overflow: hidden;
+}
+
+/* ═══ Buttons (shared) ══════════════════════════════════════════════ */
+.pm-btn {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0 18px;
+    border-radius: 999px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 13.5px;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: transform 0.32s var(--pm-ease), background 0.32s var(--pm-ease),
+        border-color 0.32s var(--pm-ease), color 0.32s var(--pm-ease), box-shadow 0.32s var(--pm-ease);
+}
+
+.pm-btn-primary {
+    color: #04120d;
+    background: var(--teal, #1de8b5);
+    box-shadow: 0 8px 24px -10px rgba(29, 232, 181, 0.6);
+}
+
+.pm-btn-ghost {
+    color: rgba(255, 255, 255, 0.72);
+    background: rgba(255, 255, 255, 0.035);
+    border-color: rgba(255, 255, 255, 0.13);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .pm-btn-primary:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 12px 30px -10px rgba(29, 232, 181, 0.75);
+    }
+    .pm-btn-ghost:hover {
+        transform: translateY(-1px);
+        color: var(--white, #fff);
+        border-color: rgba(255, 255, 255, 0.28);
+        background: rgba(255, 255, 255, 0.06);
+    }
+}
+
+.pm-consent-manage {
+    display: block;
+    margin: 16px auto 0;
+    padding: 4px 6px;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: rgba(255, 255, 255, 0.42);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.3s var(--pm-ease);
+}
+
+.pm-consent-manage:hover {
+    color: rgba(255, 255, 255, 0.72);
+}
+
+/* ═══ Floating "cookie" button (reopen preferences any time) ════════ */
+.pm-consent-fab {
+    position: fixed;
+    left: clamp(16px, 3vw, 28px);
+    bottom: clamp(16px, 3vw, 28px);
+    z-index: 2147483598;
+    width: 46px;
+    height: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background:
+        radial-gradient(ellipse 100% 100% at 30% 0%, rgba(79, 122, 244, 0.14), transparent 62%),
+        rgba(11, 11, 15, 0.82);
+    -webkit-backdrop-filter: blur(18px) saturate(1.1);
+    backdrop-filter: blur(18px) saturate(1.1);
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.06) inset,
+        0 10px 30px -12px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transform: translateY(12px) scale(0.9);
+    transition: opacity 0.45s var(--pm-ease), transform 0.45s var(--pm-ease),
+        color 0.3s var(--pm-ease), border-color 0.3s var(--pm-ease);
+}
+
+.pm-consent-fab.is-in {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.pm-consent-fab svg {
+    width: 22px;
+    height: 22px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .pm-consent-fab:hover {
+        color: var(--teal, #1de8b5);
+        border-color: rgba(29, 232, 181, 0.42);
+        transform: translateY(-2px) scale(1.05);
+        box-shadow:
+            0 1px 0 rgba(255, 255, 255, 0.08) inset,
+            0 14px 34px -12px rgba(0, 0, 0, 0.75);
+    }
+}
+
+/* ═══ Modal — choice gate (first visit) + settings (reopened) ═══════ */
+.pm-consent-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2147483601;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(3, 3, 5, 0.62);
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
+    opacity: 0;
+    transition: opacity 0.36s var(--pm-ease);
+}
+
+/* First-visit gate: darker, more "locked" backdrop. */
+.pm-consent-modal.is-gate {
+    background: rgba(2, 2, 4, 0.82);
+    -webkit-backdrop-filter: blur(11px) saturate(1.05);
+    backdrop-filter: blur(11px) saturate(1.05);
+}
+
+.pm-consent-modal.is-in {
+    opacity: 1;
+}
+
+.pm-consent-panel {
+    position: relative;
+    width: min(500px, 100%);
+    max-height: calc(100dvh - 40px);
+    overflow-y: auto;
+    padding: clamp(24px, 3vw, 34px);
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    border-radius: 22px;
+    background:
+        radial-gradient(ellipse 120% 70% at 10% 0%, rgba(79, 122, 244, 0.10), transparent 58%),
+        radial-gradient(ellipse 90% 60% at 100% 100%, rgba(29, 232, 181, 0.06), transparent 60%),
+        rgba(11, 11, 15, 0.97);
+    box-shadow: 0 30px 90px -20px rgba(0, 0, 0, 0.85);
+    transform: translateY(14px) scale(0.985);
+    transition: transform 0.4s var(--pm-ease);
+}
+
+.pm-consent-modal.is-in .pm-consent-panel {
+    transform: translateY(0) scale(1);
+}
+
+.pm-panel-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: color 0.3s var(--pm-ease), border-color 0.3s var(--pm-ease), background 0.3s var(--pm-ease);
+}
+
+.pm-panel-close svg {
+    width: 15px;
+    height: 15px;
+}
+
+.pm-panel-close:hover {
+    color: var(--white, #fff);
+    border-color: rgba(255, 255, 255, 0.24);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.pm-panel-title {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(21px, 2.6vw, 26px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--white, #fff);
+    margin: 0 0 8px;
+    padding-right: 28px;
+}
+
+.pm-panel-intro {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.58);
+    margin: 0;
+}
+
+.pm-panel-intro a {
+    color: rgba(129, 140, 248, 0.92);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.pm-panel-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.pm-panel-actions .pm-btn {
+    flex: 1 1 160px;
+}
+
+/* Collapsible granular controls */
+.pm-details {
+    display: none;
+    margin-top: 6px;
+}
+
+.pm-details[data-open] {
+    display: block;
+}
+
+.pm-opt {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.pm-opt-body {
+    flex: 1;
+    min-width: 0;
+}
+
+.pm-opt-name {
+    display: block;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 14.5px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--white, #fff);
+    margin-bottom: 4px;
+}
+
+.pm-opt-desc {
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Toggle switch */
+.pm-switch {
+    position: relative;
+    flex-shrink: 0;
+    width: 46px;
+    height: 26px;
+    margin-top: 2px;
+}
+
+.pm-switch input {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    cursor: pointer;
+}
+
+.pm-switch-track {
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    transition: background 0.3s var(--pm-ease), border-color 0.3s var(--pm-ease);
+    pointer-events: none;
+}
+
+.pm-switch-track::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #fff;
+    transition: transform 0.3s var(--pm-ease);
+}
+
+.pm-switch input:checked + .pm-switch-track {
+    background: var(--teal, #1de8b5);
+    border-color: var(--teal, #1de8b5);
+}
+
+.pm-switch input:checked + .pm-switch-track::after {
+    transform: translateX(20px);
+    background: #04120d;
+}
+
+.pm-switch input:disabled {
+    cursor: not-allowed;
+}
+
+.pm-switch input:disabled + .pm-switch-track {
+    background: rgba(29, 232, 181, 0.35);
+    border-color: rgba(29, 232, 181, 0.35);
+}
+
+.pm-switch input:focus-visible + .pm-switch-track {
+    outline: 2px solid rgba(29, 232, 181, 0.88);
+    outline-offset: 3px;
+}
+
+/* ═══ Motion / responsive ═══════════════════════════════════════════ */
+@media (max-width: 520px) {
+    .pm-panel-actions {
+        flex-direction: column;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pm-consent-modal,
+    .pm-consent-modal.is-in,
+    .pm-consent-panel,
+    .pm-consent-fab,
+    .pm-consent-fab.is-in,
+    .pm-btn {
+        transition: opacity 0.2s linear;
+        transform: none;
+    }
+}

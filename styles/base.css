@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Mors';
+    src: url('../Mors_Font.otf') format('opentype');
+    font-weight: 400 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --bg:          #050507;
+    --white:       #ffffff;
+    --teal:        #1de8b5;
+    --blue:        #4f7af4;
+    --pink:        #c040e6;
+    --muted:       rgba(255, 255, 255, 0.38);
+    --card-red:    #c42820;
+    --card-cyan:   #3dcece;
+    --card-maroon: #28101e;
+    --card-amber:  #c07810;
+    --color-1: 330 100% 40%;
+    --color-2: 140 100% 55%;
+    --color-3: 210 100% 30%;
+    --color-4: 60 100% 70%;
+    --color-5: 295 100% 45%;
+    --brand: 50 100% 50%;
+
+    /* Strong easing curves — use these instead of built-in ease/ease-out */
+    --ease-out:    cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+    --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+    --ease-luxe:   cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background: var(--bg);
+    color: var(--white);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: geometricPrecision;
+}
+
+p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 450;
+    pointer-events: none;
+    opacity: 0.034;
+    background-image:
+        repeating-radial-gradient(circle at 17% 23%, rgba(255, 255, 255, 0.9) 0 0.4px, transparent 0.4px 1.6px),
+        repeating-radial-gradient(circle at 83% 77%, rgba(255, 255, 255, 0.7) 0 0.3px, transparent 0.3px 1.4px);
+    mix-blend-mode: screen;
+}
+
+section {
+    scroll-margin-top: 92px;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid rgba(29, 232, 181, 0.88);
+    outline-offset: 4px;
+}

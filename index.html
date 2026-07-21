@@ -1,0 +1,1595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Consent Mode v2 — default state (must load before Google Tag Manager) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'personalization_storage': 'denied',
+        'functionality_storage': 'granted',
+        'security_storage': 'granted',
+        'wait_for_update': 500
+      });
+      gtag('set', 'ads_data_redaction', true);
+      gtag('set', 'url_passthrough', true);
+      try {
+        var pmC = JSON.parse(localStorage.getItem('pm_consent') || 'null');
+        if (pmC && pmC.v === 2) {
+          gtag('consent', 'update', {
+            'ad_storage': pmC.ad ? 'granted' : 'denied',
+            'ad_user_data': pmC.ad ? 'granted' : 'denied',
+            'ad_personalization': pmC.ad ? 'granted' : 'denied',
+            'analytics_storage': pmC.an ? 'granted' : 'denied',
+            'personalization_storage': pmC.ad ? 'granted' : 'denied'
+          });
+          dataLayer.push({
+            'consent_ads': pmC.ad ? 'granted' : 'denied',
+            'consent_analytics': pmC.an ? 'granted' : 'denied'
+          });
+        }
+      } catch (e) {}
+    </script>
+    <!-- End Google Consent Mode v2 default -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M5ZBQRC5');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Dancing+Script:wght@700&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/sections-a.css">
+    <link rel="stylesheet" href="styles/sections-b.css">
+    <link rel="stylesheet" href="styles/sections-c.css">
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/creative-loop.css">
+    <link rel="stylesheet" href="styles/refinements.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Performore",
+      "legalName": "MSMC Limited Ltd",
+      "alternateName": "Performore",
+      "url": "https://performore.co",
+      "logo": "https://performore.co/image_assets/performore_brand_logo_white.webp",
+      "email": "hello@performore.co",
+      "sameAs": ["https://www.linkedin.com/company/107313126/"]
+    }
+    </script>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M5ZBQRC5"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- NAV -->
+    <nav>
+        <a href="#home" class="logo" aria-label="Performore">
+            <img src="image_assets/performore_brand_logo_white.webp" alt="Performore" decoding="async" fetchpriority="high">
+        </a>
+        <ul class="nav-links" aria-label="Primary">
+            <li><a href="#home" class="is-active" data-nav-link="home">Home</a></li>
+            <li><a href="#clients" data-nav-link="clients">Clients</a></li>
+            <li><a href="#results" data-nav-link="results">Results</a></li>
+            <li class="nav-services">
+                <a href="#services" class="nav-services-trigger" data-nav-link="services">
+                    Services
+                    <svg class="nav-services-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="m6 9 6 6 6-6"/>
+                    </svg>
+                </a>
+                <div class="nav-services-panel" role="menu" aria-label="Services">
+                    <a href="growth-strategy.html" class="nav-services-item" role="menuitem">
+                        <span class="nav-services-badge" style="--svc-accent:#4f7af4"></span>
+                        <span class="nav-services-body">
+                            <span class="nav-services-title">Growth Strategy</span>
+                            <span class="nav-services-desc">Funnel, unit economics and a 90-day plan.</span>
+                        </span>
+                    </a>
+                    <a href="algorithm-training.html" class="nav-services-item" role="menuitem">
+                        <span class="nav-services-badge" style="--svc-accent:#1de8b5"></span>
+                        <span class="nav-services-body">
+                            <span class="nav-services-title">Algorithm Training</span>
+                            <span class="nav-services-desc">Tracking and signals the algorithm learns from.</span>
+                        </span>
+                    </a>
+                    <a href="creative-strategy.html" class="nav-services-item" role="menuitem">
+                        <span class="nav-services-badge" style="--svc-accent:#c040e6"></span>
+                        <span class="nav-services-body">
+                            <span class="nav-services-title">Creative Strategy</span>
+                            <span class="nav-services-desc">Angle-first creative, tested weekly.</span>
+                        </span>
+                    </a>
+                    <a href="media-buying.html" class="nav-services-item" role="menuitem">
+                        <span class="nav-services-badge" style="--svc-accent:#818cf8"></span>
+                        <span class="nav-services-body">
+                            <span class="nav-services-title">Media Buying</span>
+                            <span class="nav-services-desc">Budget run like a portfolio, not a pile of campaigns.</span>
+                        </span>
+                    </a>
+                </div>
+            </li>
+            <li><a href="#creative-loop" data-nav-link="creative-loop">Creative Loop</a></li>
+            <li><a href="#faq" data-nav-link="faq">FAQ</a></li>
+            <li class="nav-notch" aria-hidden="true">
+                <svg viewBox="0 0 100 20" preserveAspectRatio="none">
+                    <path
+                        d="M 2 1 H 98 Q 99 1 99 2 V 10 H 88 Q 87.2 10 86.6 11.4 L 84.8 18 H 15.2 L 13.4 11.4 Q 12.8 10 12 10 H 2 Q 1 10 1 9 V 2 Q 1 1 2 1 Z"
+                        fill="currentColor"
+                    />
+                </svg>
+            </li>
+        </ul>
+        <div class="nav-right">
+            <a href="javascript:void(0)" class="cta" data-cal-link="morsofer/25-mins-with-performore" data-cal-namespace="25-mins-with-performore" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+                <div class="cta-circle">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                         stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </div>
+                Start growth sprint
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home" data-nav-section="home">
+        <div class="hero-ambient" aria-hidden="true">
+            <span class="ambient-label" style="top:9%;left:2%">CAC</span>
+            <span class="ambient-label" style="top:54%;left:1.5%">Payback Period</span>
+            <span class="ambient-label" style="bottom:12%;left:2.5%">Activation Rate</span>
+            <span class="ambient-label" style="top:8%;right:2%">LTV Ratio</span>
+            <span class="ambient-label" style="top:36%;right:1.5%">Creative Signal</span>
+            <span class="ambient-label" style="bottom:10%;right:2%">ROAS</span>
+        </div>
+
+        <div class="hero-content">
+            <h1 class="hero-headline">
+                <span class="hero-line">Senior growth</span>
+                <span class="hero-line">thinking,</span>
+                <span class="hero-line">plugged directly into</span>
+                <span class="hero-line"><span class="gradient-text">execution.</span></span>
+            </h1>
+            <div class="hero-actions">
+                <a href="javascript:void(0)" class="btn-primary" data-cal-link="morsofer/25-mins-with-performore" data-cal-namespace="25-mins-with-performore" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+                    <span>Let's talk growth</span>
+                    <span class="btn-icon" aria-hidden="true">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </a>
+                <a href="#statement" class="btn-secondary">See how we work</a>
+            </div>
+        </div>
+
+        <div aria-hidden="true">
+            <div class="growth-card card-strategy">
+                <div class="card-label">
+                    <span class="card-dot" style="background:#4f7af4"></span>
+                    01 / Strategy
+                </div>
+                <div class="card-title">Growth Strategy</div>
+                <div class="funnel-bars">
+                    <div class="f-bar" style="height:100%;background:rgba(79,122,244,0.75);border:1px solid rgba(79,122,244,0.9)"></div>
+                    <div class="f-bar" style="height:76%;background:rgba(79,122,244,0.58);border:1px solid rgba(79,122,244,0.7)"></div>
+                    <div class="f-bar" style="height:54%;background:rgba(79,122,244,0.44);border:1px solid rgba(79,122,244,0.55)"></div>
+                    <div class="f-bar" style="height:34%;background:rgba(79,122,244,0.3);border:1px solid rgba(79,122,244,0.4)"></div>
+                    <div class="f-bar" style="height:18%;background:rgba(79,122,244,0.2);border:1px solid rgba(79,122,244,0.28)"></div>
+                </div>
+                <div style="display:flex;justify-content:space-between;margin-top:7px">
+                    <span style="font-family:'Bricolage Grotesque',sans-serif;font-size:8px;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.26)">Reach</span>
+                    <span style="font-family:'Bricolage Grotesque',sans-serif;font-size:8px;letter-spacing:.09em;text-transform:uppercase;color:rgba(255,255,255,.26)">Closed - 18%</span>
+                </div>
+            </div>
+
+            <div class="growth-card card-data">
+                <div class="card-label">
+                    <span class="card-dot" style="background:#4f7af4"></span>
+                    02 / Data Intelligence
+                </div>
+                <div class="metric-grid">
+                    <div class="metric-item">
+                        <span class="metric-key">CAC</span>
+                        <span class="metric-val">$42</span>
+                        <span class="metric-delta neg">12%</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-key">LTV</span>
+                        <span class="metric-val">$840</span>
+                        <span class="metric-delta">8%</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-key">Payback</span>
+                        <span class="metric-val" style="font-size:15px">3.2mo</span>
+                        <span class="metric-delta">0.4</span>
+                    </div>
+                </div>
+                <svg class="mini-chart" viewBox="0 0 184 38" fill="none">
+                    <defs>
+                        <linearGradient id="cg" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#4f7af4" stop-opacity=".18"/>
+                            <stop offset="100%" stop-color="#4f7af4" stop-opacity="0"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M0 30 C22 28 36 22 56 16 C76 10 94 22 114 14 C134 6 158 4 184 1" stroke="#4f7af4" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+                    <path d="M0 30 C22 28 36 22 56 16 C76 10 94 22 114 14 C134 6 158 4 184 1 L184 38 L0 38Z" fill="url(#cg)"/>
+                </svg>
+            </div>
+
+            <div class="growth-card card-creative">
+                <div class="card-label">
+                    <span class="card-dot" style="background:#1de8b5"></span>
+                    03 / Creative
+                </div>
+                <div class="ab-rows">
+                    <div class="ab-row">
+                        <div class="ab-header">
+                            <span class="ab-name">Variant A</span>
+                            <span class="ab-rate">2.4%</span>
+                        </div>
+                        <div class="ab-track"><div class="ab-fill" style="width:40%"></div></div>
+                    </div>
+                    <div class="ab-row">
+                        <div class="ab-header">
+                            <span class="ab-name">Variant B</span>
+                            <span class="ab-rate winner">4.1%</span>
+                        </div>
+                        <div class="ab-track"><div class="ab-fill winner" style="width:72%"></div></div>
+                    </div>
+                </div>
+                <div style="margin-top:10px;padding-top:8px;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;align-items:center">
+                    <span style="font-family:'Bricolage Grotesque',sans-serif;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.24)">Confidence</span>
+                    <span style="font-family:'Bricolage Grotesque',sans-serif;font-size:12px;font-weight:700;letter-spacing:-.02em;color:#1de8b5">94.6%</span>
+                </div>
+            </div>
+
+            <div class="growth-card card-paid">
+                <div class="card-label">
+                    <span class="card-dot" style="background:#4f7af4"></span>
+                    04 / Media Buying
+                </div>
+                <div class="metric-grid">
+                    <div class="metric-item">
+                        <span class="metric-key">ROAS</span>
+                        <span class="metric-val">4.8x</span>
+                        <span class="metric-delta">0.6</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-key">Spend</span>
+                        <span class="metric-val" style="font-size:15px">$84k</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-key">Pipeline</span>
+                        <span class="metric-val" style="font-size:15px;color:#1de8b5">+$404k</span>
+                    </div>
+                </div>
+                <svg class="mini-chart" viewBox="0 0 184 40" fill="none">
+                    <rect x="2"   y="22" width="20" height="18" rx="2" fill="rgba(79,122,244,.22)" stroke="rgba(79,122,244,.35)" stroke-width=".6"/>
+                    <rect x="28"  y="14" width="20" height="26" rx="2" fill="rgba(79,122,244,.32)" stroke="rgba(79,122,244,.45)" stroke-width=".6"/>
+                    <rect x="54"  y="16" width="20" height="24" rx="2" fill="rgba(79,122,244,.32)" stroke="rgba(79,122,244,.45)" stroke-width=".6"/>
+                    <rect x="80"  y="6"  width="20" height="34" rx="2" fill="rgba(79,122,244,.52)" stroke="rgba(79,122,244,.65)" stroke-width=".6"/>
+                    <rect x="106" y="2"  width="20" height="38" rx="2" fill="rgba(79,122,244,.65)" stroke="rgba(79,122,244,.78)" stroke-width=".6"/>
+                    <rect x="132" y="0"  width="20" height="40" rx="2" fill="rgba(79,122,244,.82)" stroke="rgba(79,122,244,.95)" stroke-width=".6"/>
+                </svg>
+            </div>
+
+            <div class="growth-card card-measurement">
+                <div class="card-label">
+                    <span class="card-dot" style="background:#c040e6"></span>
+                    05 / Measurement
+                </div>
+                <div class="event-list">
+                    <div class="event-row">
+                        <span class="event-dot" style="background:#4f7af4"></span>
+                        <span class="event-name">Page Activation</span>
+                        <span class="event-val">84.2%</span>
+                    </div>
+                    <div class="event-row">
+                        <span class="event-dot" style="background:#1de8b5"></span>
+                        <span class="event-name">Funnel Entry</span>
+                        <span class="event-val">38.7%</span>
+                    </div>
+                    <div class="event-row">
+                        <span class="event-dot" style="background:#c040e6"></span>
+                        <span class="event-name">Conversion Event</span>
+                        <span class="event-val">12.1%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOGO CAROUSEL -->
+    <section class="logo-cloud-section" id="clients" aria-label="Trusted client logos" data-nav-section="clients">
+        <div class="logo-cloud">
+            <div class="logo-slider">
+                <div class="logo-track">
+                    <span class="logo-item"><img src="image_assets/logos/TradeStars-4.svg" alt="TradeStars" decoding="async"></span>
+                    <span class="logo-item"><img src="image_assets/logos/Apron.svg" alt="Apron" decoding="async"></span>
+                    <span class="logo-item"><img src="image_assets/logos/sharp.svg" alt="Sharp" decoding="async"></span>
+                    <span class="logo-item logo-item--publicis"><img src="image_assets/logos/Publicis.svg" alt="Publicis" decoding="async"></span>
+                    <span class="logo-item"><img src="image_assets/logos/Steve-Madden.svg" alt="Steve Madden" decoding="async"></span>
+                    <span class="logo-item logo-item--boost logo-item--hmc"><img src="image_assets/logos/HMC.svg" alt="HMC" decoding="async"></span>
+                    <span class="logo-item"><img src="image_assets/logos/Marketeam.ai_.svg" alt="Marketeam AI" decoding="async"></span>
+                    <span class="logo-item"><img src="image_assets/logos/Fielderz.svg" alt="Fielderz" decoding="async"></span>
+                    <span class="logo-item logo-item--boost"><img src="image_assets/logos/Future-Doc.svg" alt="Future Doc" decoding="async"></span>
+
+                    <span class="logo-item" aria-hidden="true"><img src="image_assets/logos/TradeStars-4.svg" alt="" decoding="async"></span>
+                    <span class="logo-item" aria-hidden="true"><img src="image_assets/logos/Apron.svg" alt="" decoding="async"></span>
+                    <span class="logo-item" aria-hidden="true"><img src="image_assets/logos/sharp.svg" alt="" decoding="async"></span>
+                    <span class="logo-item logo-item--publicis" aria-hidden="true"><img src="image_assets/logos/Publicis.svg" alt="" decoding="async"></span>
+                    <span class="logo-item" aria-hidden="true"><img src="image_assets/logos/Steve-Madden.svg" alt="" decoding="async"></span>
+                    <span class="logo-item logo-item--boost logo-item--hmc" aria-hidden="true"><img src="image_assets/logos/HMC.svg" alt="" decoding="async"></span>
+                    <span class="logo-item" aria-hidden="true"><img src="image_assets/logos/Marketeam.ai_.svg" alt="" decoding="async"></span>
+                    <span class="logo-item" aria-hidden="true"><img src="image_assets/logos/Fielderz.svg" alt="" decoding="async"></span>
+                    <span class="logo-item logo-item--boost" aria-hidden="true"><img src="image_assets/logos/Future-Doc.svg" alt="" decoding="async"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GROWTH TRAJECTORY -->
+    <section class="growth-trajectory" aria-label="Growth over time">
+        <div class="growth-trajectory-shell">
+            <div class="growth-trajectory-head">
+                <p class="growth-trajectory-title">The operating rhythm</p>
+                <p class="growth-trajectory-note">Diagnose / test / scale</p>
+            </div>
+            <div class="growth-chart-frame">
+                <svg class="growth-chart" viewBox="0 0 1200 300" preserveAspectRatio="none" role="img" aria-labelledby="growthChartTitle growthChartDesc">
+                    <title id="growthChartTitle">Growth trajectory chart</title>
+                    <desc id="growthChartDesc">A minimal chart showing a growth process that improves through measurement, testing, learning, and scaling.</desc>
+                    <defs>
+                        <linearGradient id="growthArea" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#4f7af4" stop-opacity=".28"/>
+                            <stop offset="48%" stop-color="#4f7af4" stop-opacity=".08"/>
+                            <stop offset="100%" stop-color="#4f7af4" stop-opacity="0"/>
+                        </linearGradient>
+                        <linearGradient id="growthStroke" x1="64" y1="0" x2="1136" y2="0" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#4f7af4"/>
+                            <stop offset="55%" stop-color="#1de8b5"/>
+                            <stop offset="100%" stop-color="#c040e6"/>
+                        </linearGradient>
+                    </defs>
+                    <g class="growth-grid" aria-hidden="true">
+                        <path d="M64 64H1136"/>
+                        <path d="M64 150H1136"/>
+                        <path d="M64 236H1136"/>
+                    </g>
+                    <g class="growth-axes" aria-hidden="true">
+                        <!-- Y axis -->
+                        <line class="growth-axis-line" x1="64" y1="44" x2="64" y2="252"/>
+                        <!-- X axis -->
+                        <line class="growth-axis-line" x1="64" y1="252" x2="1148" y2="252"/>
+                        <!-- Y ticks -->
+                        <line class="growth-axis-tick" x1="56" y1="64" x2="64" y2="64"/>
+                        <line class="growth-axis-tick" x1="56" y1="150" x2="64" y2="150"/>
+                        <line class="growth-axis-tick" x1="56" y1="236" x2="64" y2="236"/>
+                        <!-- X ticks at data points -->
+                        <line class="growth-axis-tick" x1="210"  y1="252" x2="210"  y2="260"/>
+                        <line class="growth-axis-tick" x1="492"  y1="252" x2="492"  y2="260"/>
+                        <line class="growth-axis-tick" x1="796"  y1="252" x2="796"  y2="260"/>
+                        <line class="growth-axis-tick" x1="1136" y1="252" x2="1136" y2="260"/>
+                        <!-- Y axis labels -->
+                        <text class="growth-y-label" x="48" y="64">High</text>
+                        <text class="growth-y-label" x="48" y="150">Mid</text>
+                        <text class="growth-y-label" x="48" y="236">Low</text>
+                    </g>
+                    <path class="growth-area" d="M64 232 C126 228 152 210 210 204 C264 198 286 226 342 214 C410 200 430 154 492 160 C552 166 582 194 638 176 C710 154 728 108 796 118 C858 128 884 154 938 130 C1000 102 1042 48 1136 58 L1136 252 L64 252Z"/>
+                    <path class="growth-path growth-path-halo" d="M64 232 C126 228 152 210 210 204 C264 198 286 226 342 214 C410 200 430 154 492 160 C552 166 582 194 638 176 C710 154 728 108 796 118 C858 128 884 154 938 130 C1000 102 1042 48 1136 58"/>
+                    <path class="growth-path growth-path-line" d="M64 232 C126 228 152 210 210 204 C264 198 286 226 342 214 C410 200 430 154 492 160 C552 166 582 194 638 176 C710 154 728 108 796 118 C858 128 884 154 938 130 C1000 102 1042 48 1136 58"/>
+                    <g class="growth-points" aria-hidden="true">
+                        <circle class="growth-point" cx="210" cy="204" r="6"/>
+                        <circle class="growth-point" cx="492" cy="160" r="6"/>
+                        <circle class="growth-point" cx="796" cy="118" r="6"/>
+                        <circle class="growth-point growth-point-end" cx="1136" cy="58" r="8"/>
+                    </g>
+                </svg>
+                <div class="growth-axis" aria-hidden="true">
+                    <span>Diagnose</span>
+                    <span>Test</span>
+                    <span>Learn</span>
+                    <span>Scale</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section break -->
+    <div class="flow-divider" aria-hidden="true">
+        <span class="flow-divider-line"></span>
+        <span class="flow-divider-mark"></span>
+        <span class="flow-divider-line"></span>
+    </div>
+
+    <!-- STATEMENT — brand reveal on scroll -->
+    <section class="statement-section" id="statement">
+        <div class="statement-glow" aria-hidden="true"></div>
+        <div class="statement-inner">
+            <p class="statement-body">
+                One growth partner connecting strategy, media, creative and data for startups ready to scale.
+            </p>
+        </div>
+    </section>
+
+    <!-- NUMBERS / RESULTS -->
+    <section class="numbers-section" id="results" data-screen-label="Results" data-nav-section="results">
+        <div class="numbers-shell">
+            <img class="numbers-image" src="image_assets/section_photos/results-field.png" alt="" loading="lazy" decoding="async">
+            <div class="numbers-content">
+                <h2 class="numbers-title">Numbers we're proud to share</h2>
+
+                <div class="numbers-cards" aria-label="Performore results">
+                    <article class="number-card">
+                        <span class="number-value">20+ Years</span>
+                        <h3 class="number-label">Industry experience</h3>
+                        <p class="number-copy">We have worked inside top agencies, leading brands, and fast moving startups. That range helps us spot what works.</p>
+                    </article>
+
+                    <article class="number-card">
+                        <span class="number-value">£20M+</span>
+                        <h3 class="number-label">Media budget managed</h3>
+                        <p class="number-copy">We have managed paid media budgets at serious scale, from startup tests to enterprise campaigns.</p>
+                    </article>
+
+                    <article class="number-card">
+                        <span class="number-value">3 Years</span>
+                        <h3 class="number-label">Average client retention</h3>
+                        <p class="number-copy">Clients stay because we are honest, easy to work with, and care about their growth like it is our own.</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services-section" id="services" data-nav-section="services" data-screen-label="04 Services">
+        <div class="services-inner">
+
+            <!-- Left: media card with floating stat badges -->
+            <div class="svc-media-col">
+                <div class="svc-card-wrap">
+                    <div class="svc-media-card">
+                        <div class="svc-card-imgs" id="svcCardImgs"></div>
+                    </div>
+                    <!-- Badge top-right -->
+                    <div class="svc-badge svc-badge-tr">
+                        <div class="svc-badge-icon-wrap is-blue">
+                            <img id="svcBadgeIcon1" src="design_components/SVG - ABSTRACTS - 110 UNITS/95.svg" alt="" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+                    <!-- Badge bottom-left -->
+                    <div class="svc-badge svc-badge-bl">
+                        <div class="svc-badge-icon-wrap is-purple">
+                            <img id="svcBadgeIcon2" src="design_components/SVG - ABSTRACTS - 110 UNITS/38.svg" alt="" loading="lazy" decoding="async">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: what we do + stacked service names -->
+            <div class="svc-names-col">
+                <span class="services-lbl">What we do</span>
+                <nav class="svc-names" id="svcNames" aria-label="Services"></nav>
+                <a href="#faq" class="svc-all-btn">Read FAQ</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- THE CREATIVE LOOP -->
+    <section class="cl-section" id="creative-loop" data-screen-label="Creative Loop" data-nav-section="creative-loop">
+        <div class="cl-pin">
+            <div class="cl-bg" aria-hidden="true"></div>
+
+            <!-- Title + orbit travel together as one unit -->
+            <div class="cl-stage">
+                <h2 class="cl-title">
+                    <span class="cl-title-part cl-title-left">The Creative</span>
+                    <span class="cl-orbit" aria-hidden="true">
+                        <svg class="cl-orbit-svg" viewBox="0 0 220 220" fill="none">
+                            <defs>
+                                <radialGradient id="clCore" cx="42%" cy="38%" r="72%">
+                                    <stop offset="0%" stop-color="#3a3c58"/>
+                                    <stop offset="55%" stop-color="#171823"/>
+                                    <stop offset="100%" stop-color="#05050c"/>
+                                </radialGradient>
+                                <radialGradient id="clRim" cx="50%" cy="50%" r="50%">
+                                    <stop offset="78%" stop-color="rgba(255,255,255,0)"/>
+                                    <stop offset="96%" stop-color="rgba(255,255,255,0.22)"/>
+                                    <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+                                </radialGradient>
+                            </defs>
+                            <g class="cl-orbit-ticks"></g>
+                            <circle class="cl-orbit-core" cx="110" cy="110" r="52" fill="url(#clCore)"/>
+                            <circle cx="110" cy="110" r="52" fill="url(#clRim)"/>
+                            <g class="cl-orbit-rings">
+                                <ellipse cx="110" cy="110" rx="50" ry="86" transform="rotate(32 110 110)"/>
+                                <ellipse cx="110" cy="110" rx="50" ry="86" transform="rotate(-32 110 110)"/>
+                                <circle class="cl-orbit-dot" cx="110" cy="24" r="3.2"/>
+                            </g>
+                        </svg>
+                    </span>
+                    <span class="cl-title-part cl-title-right">Loop</span>
+                </h2>
+            </div>
+
+            <!-- The loop diagram draws itself on the right once the loop has turned -->
+            <div class="cl-panel">
+                <p class="cl-kicker">The system <span>&middot;</span> Turning advertising data into continuous growth</p>
+                <div class="cl-flow">
+                    <ol class="cl-steps">
+                        <li class="cl-step" style="--cl-accent:#4f7af4">
+                            <div class="cl-step-head">
+                                <span class="cl-step-node" aria-hidden="true"></span>
+                                <span class="cl-step-idx">01</span>
+                                <h3 class="cl-step-name">Campaign</h3>
+                            </div>
+                            <p class="cl-step-body">We launch ads with clear messages, audiences and commercial goals.</p>
+                        </li>
+                        <li class="cl-step" style="--cl-accent:#4f7af4">
+                            <div class="cl-step-head">
+                                <span class="cl-step-node" aria-hidden="true"></span>
+                                <span class="cl-step-idx">02</span>
+                                <h3 class="cl-step-name">Data</h3>
+                            </div>
+                            <p class="cl-step-body">We analyse more than conversions. We examine hooks, click-through rates, engagement, conversion rates, CAC, contribution and customer quality.</p>
+                        </li>
+                        <li class="cl-step" style="--cl-accent:#4f7af4">
+                            <div class="cl-step-head">
+                                <span class="cl-step-node" aria-hidden="true"></span>
+                                <span class="cl-step-idx">03</span>
+                                <h3 class="cl-step-name">Hypothesis</h3>
+                            </div>
+                            <p class="cl-step-body">We translate the data into a clear explanation: what appears to be working, why might it be working, and what should we test next?</p>
+                        </li>
+                        <li class="cl-step" style="--cl-accent:#c040e6">
+                            <div class="cl-step-head">
+                                <span class="cl-step-node" aria-hidden="true"></span>
+                                <span class="cl-step-idx">04</span>
+                                <h3 class="cl-step-name">Creative</h3>
+                            </div>
+                            <p class="cl-step-body">That hypothesis becomes a new execution: a stronger hook, a different message, another format, a clearer product benefit or a new angle.</p>
+                        </li>
+                        <li class="cl-step" style="--cl-accent:#c040e6">
+                            <div class="cl-step-head">
+                                <span class="cl-step-node" aria-hidden="true"></span>
+                                <span class="cl-step-idx">05</span>
+                                <h3 class="cl-step-name">Test</h3>
+                            </div>
+                            <p class="cl-step-body">We test the new creative against the existing winners, with enough structure to understand what actually caused the difference.</p>
+                        </li>
+                        <li class="cl-step" style="--cl-accent:#1de8b5">
+                            <div class="cl-step-head">
+                                <span class="cl-step-node" aria-hidden="true"></span>
+                                <span class="cl-step-idx">06</span>
+                                <h3 class="cl-step-name">Iterate</h3>
+                            </div>
+                            <p class="cl-step-body">We keep the strongest elements, remove what failed and create the next generation of variations.</p>
+                        </li>
+                        <li class="cl-step" style="--cl-accent:#1de8b5">
+                            <div class="cl-step-head">
+                                <span class="cl-step-node" aria-hidden="true"></span>
+                                <span class="cl-step-idx">07</span>
+                                <h3 class="cl-step-name">Scale</h3>
+                            </div>
+                            <p class="cl-step-body">Once an idea repeatedly produces the right business outcome, we increase spend and expand it across audiences, formats and channels.</p>
+                        </li>
+                    </ol>
+                    <p class="cl-flow-return">The loop begins again</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PILLARS OF GROWTH -->
+    <section class="pillars-section" id="growth-pillars" data-screen-label="Growth Pillars" hidden>
+        <style>
+            /* ═══════════════════════════════════════════════
+               PILLARS OF GROWTH
+            ═══════════════════════════════════════════════ */
+            .pillars-section {
+                --pillar-spot-x: 50;
+                --pillar-spot-y: 50;
+                --pillar-spot-opacity: 0;
+                --pillar-fold-line: 0;
+                position: relative;
+                min-height: 100vh;
+                min-height: 100dvh;
+                padding: clamp(28px, 3.5vw, 48px) clamp(20px, 4vw, 56px) clamp(28px, 3.5vw, 48px);
+                background: #fbfbfd;
+                overflow: hidden;
+                isolation: isolate;
+                perspective: 1200px;
+                transform-style: preserve-3d;
+            }
+            .pillars-section::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background-image: radial-gradient(
+                    circle at 12% 8%,
+                    rgba(79, 122, 244, 0.22),
+                    transparent 68%
+                );
+                filter: blur(78px);
+                pointer-events: none;
+                z-index: 0;
+            }
+            .pillars-section::after {
+                content: '';
+                position: absolute;
+                inset: -18% -10%;
+                background:
+                    radial-gradient(
+                        circle at calc(var(--pillar-spot-x) * 1%) calc(var(--pillar-spot-y) * 1%),
+                        rgba(29, 232, 181, 0.28),
+                        rgba(79, 122, 244, 0.16) 18%,
+                        transparent 42%
+                    );
+                opacity: var(--pillar-spot-opacity);
+                filter: blur(18px);
+                pointer-events: none;
+                z-index: 0;
+            }
+            .pillars-card {
+                max-width: 1120px;
+                margin: 0 auto;
+                position: relative;
+                z-index: 1;
+                padding: clamp(12px, 1.5vw, 20px) 0 0;
+                transform-origin: 50% 0%;
+                transform-style: preserve-3d;
+                will-change: transform, opacity, filter;
+            }
+            .pillars-card::before,
+            .pillars-card::after { display: none; }
+            .pillars-fold-crease {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                height: 1px;
+                background: linear-gradient(90deg, transparent, rgba(15, 6, 26, 0.26), transparent);
+                opacity: var(--pillar-fold-line);
+                box-shadow: 0 20px 70px rgba(15, 6, 26, 0.28);
+                pointer-events: none;
+                z-index: 4;
+            }
+            .pillars-progress {
+                position: absolute;
+                left: clamp(-52px, -4vw, -34px);
+                top: clamp(118px, 13vw, 176px);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
+                z-index: 3;
+                pointer-events: none;
+            }
+            .pillars-progress-line {
+                position: absolute;
+                top: 7px;
+                bottom: 7px;
+                width: 1px;
+                background: linear-gradient(180deg, rgba(79, 70, 229, 0.18), rgba(29, 232, 181, 0.74), rgba(79, 70, 229, 0.18));
+                transform-origin: top center;
+                transform: scaleY(0);
+            }
+            .pillars-progress-dot {
+                position: relative;
+                width: 13px;
+                height: 13px;
+                border-radius: 50%;
+                border: 1px solid rgba(79, 70, 229, 0.28);
+                background: rgba(255, 255, 255, 0.82);
+                box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.68);
+                transition: background 0.28s ease, border-color 0.28s ease, transform 0.28s ease, box-shadow 0.28s ease;
+            }
+            .pillars-progress-dot.is-active {
+                background: #1de8b5;
+                border-color: rgba(29, 232, 181, 0.95);
+                transform: scale(1.22);
+                box-shadow: 0 0 0 5px rgba(29, 232, 181, 0.14), 0 0 24px rgba(29, 232, 181, 0.42);
+            }
+            .pillars-header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                margin-bottom: clamp(16px, 2vw, 24px);
+                position: relative;
+                z-index: 1;
+            }
+            .pillars-eyebrow {
+                display: inline-block;
+                font-family: 'Bricolage Grotesque', sans-serif;
+                font-size: 10px;
+                font-weight: 700;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                color: #4f46e5;
+                margin-bottom: 12px;
+            }
+            .pillars-title {
+                font-family: 'Bricolage Grotesque', sans-serif;
+                font-size: clamp(26px, 2.8vw, 44px);
+                font-weight: 800;
+                letter-spacing: -0.04em;
+                line-height: 1.05;
+                color: #0f061a;
+                margin: 0;
+                text-wrap: balance;
+            }
+            .pillars-title-word {
+                display: inline-block;
+                will-change: transform, opacity, filter;
+            }
+            .pillars-sub {
+                font-family: 'Plus Jakarta Sans', sans-serif;
+                font-size: clamp(15px, 1.25vw, 18px);
+                line-height: 1.65;
+                color: rgba(15, 6, 26, 0.58);
+                margin: 0;
+                letter-spacing: 0.01em;
+                max-width: 440px;
+            }
+            .pillars-summary {
+                padding: 18px 20px;
+                border-left: 2px solid rgba(29, 232, 181, 0.82);
+                background: rgba(255, 255, 255, 0.66);
+                box-shadow: 0 18px 60px rgba(46, 46, 80, 0.08);
+            }
+            .pillars-summary strong {
+                display: block;
+                font-family: 'Bricolage Grotesque', sans-serif;
+                font-size: 18px;
+                line-height: 1.18;
+                letter-spacing: -0.025em;
+                color: #0f061a;
+                margin-bottom: 8px;
+            }
+            /* ── Split layout ── */
+            .pillars-split {
+                display: grid;
+                grid-template-columns: 280px 1fr;
+                gap: clamp(24px, 3.5vw, 48px);
+                align-items: center;
+                margin-top: clamp(10px, 1.5vw, 18px);
+            }
+            .pillars-left-panel {
+                position: relative;
+                height: clamp(260px, 36vh, 340px);
+            }
+            .pillar-detail {
+                position: absolute;
+                inset: 0;
+                display: flex;
+                align-items: flex-start;
+                opacity: 0;
+                transform: translateY(12px);
+                transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+                pointer-events: none;
+            }
+            .pillar-detail.is-active {
+                opacity: 1;
+                transform: translateY(0);
+                pointer-events: auto;
+            }
+            /* unified card: image on top, tooltip below — one border-radius clips both */
+            .pillar-detail-inner {
+                width: 100%;
+                background: #ffffff;
+                border: 1px solid rgba(109, 40, 217, 0.14);
+                border-radius: 1rem;
+                box-shadow: 0 4px 20px rgba(109, 40, 217, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+                overflow: hidden;
+            }
+            .pillar-detail-image {
+                width: 100%;
+                aspect-ratio: 16 / 9;
+                background: linear-gradient(135deg, #e8e4ff 0%, #d4d0f8 100%);
+            }
+            .pillar-detail-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+            /* matches .pn-tooltip layout exactly */
+            .pillar-detail-card {
+                padding: 14px 16px;
+                display: flex;
+                gap: 11px;
+                align-items: flex-start;
+                border-top: 1px solid rgba(109, 40, 217, 0.08);
+            }
+            /* ── Diagram (right column, no centering needed) ── */
+            .pillars-diagram {
+                position: relative;
+                width: 100%;
+                aspect-ratio: 900 / 480;
+            }
+            .pillars-svg {
+                width: 100%;
+                height: 100%;
+                display: block;
+                overflow: visible;
+            }
+            /* ── Pillar hover nodes ── */
+            .pn {
+                position: absolute;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                cursor: pointer;
+                z-index: 10;
+            }
+            .pn::before {
+                content: '';
+                position: absolute;
+                inset: 9px;
+                border-radius: inherit;
+                border: 1px solid rgba(29, 232, 181, 0);
+                background: radial-gradient(circle, rgba(29, 232, 181, 0.28), transparent 62%);
+                opacity: 0;
+                transform: scale(0.65);
+                transition: opacity 0.34s ease, transform 0.34s ease, border-color 0.34s ease, box-shadow 0.34s ease;
+            }
+            .pn.is-active::before {
+                opacity: 1;
+                transform: scale(1.34);
+                border-color: rgba(29, 232, 181, 0.72);
+                box-shadow: 0 0 38px rgba(29, 232, 181, 0.32);
+            }
+            .pn-top    { left: 50%;    top: 14.2%; transform: translate(-50%, -50%); }
+            .pn-right  { left: 83.6%;  top: 50%;   transform: translate(-50%, -50%); }
+            .pn-left   { left: 16.4%;  top: 50%;   transform: translate(-50%, -50%); }
+            .pn-bottom { left: 50%;    top: 85.8%; transform: translate(-50%, -50%); }
+            .pn-tooltip {
+                position: absolute;
+                background: #ffffff;
+                border: 1px solid rgba(109, 40, 217, 0.14);
+                border-radius: 1rem;
+                padding: 14px 16px;
+                width: 196px;
+                display: flex;
+                gap: 11px;
+                align-items: flex-start;
+                box-shadow: 0 4px 20px rgba(109, 40, 217, 0.1), 0 1px 3px rgba(0,0,0,0.06);
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1), transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+                white-space: normal;
+            }
+            .pn:hover .pn-tooltip,
+            .pn:focus-visible .pn-tooltip,
+            .pn.is-active .pn-tooltip { opacity: 1; pointer-events: auto; }
+            .pn-tooltip-icon {
+                flex-shrink: 0;
+                width: 26px;
+                height: 26px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 1px;
+            }
+            .pn-tooltip-icon svg { width: 22px; height: 22px; }
+            .pn-tooltip-label {
+                display: block;
+                font-family: 'Bricolage Grotesque', sans-serif;
+                font-size: 10px;
+                font-weight: 700;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                color: #6d28d9;
+                margin-bottom: 4px;
+            }
+            .pn-tooltip-text {
+                font-family: 'Plus Jakarta Sans', sans-serif;
+                font-size: 11.5px;
+                line-height: 1.55;
+                color: rgba(15, 6, 26, 0.5);
+                margin: 0;
+            }
+            /* Tooltip direction per node */
+            .pn-top .pn-tooltip {
+                top: calc(100% + 12px); left: 50%;
+                transform: translateX(-50%) translateY(-5px);
+            }
+            .pn-top:hover .pn-tooltip,
+            .pn-top.is-active .pn-tooltip { transform: translateX(-50%) translateY(0); }
+            .pn-right .pn-tooltip {
+                right: calc(100% + 12px); top: 50%;
+                transform: translateY(-50%) translateX(5px);
+            }
+            .pn-right:hover .pn-tooltip,
+            .pn-right.is-active .pn-tooltip { transform: translateY(-50%) translateX(0); }
+            .pn-left .pn-tooltip {
+                left: calc(100% + 12px); top: 50%;
+                transform: translateY(-50%) translateX(-5px);
+            }
+            .pn-left:hover .pn-tooltip,
+            .pn-left.is-active .pn-tooltip { transform: translateY(-50%) translateX(0); }
+            .pn-bottom .pn-tooltip {
+                bottom: calc(100% + 12px); left: 50%;
+                transform: translateX(-50%) translateY(5px);
+            }
+            .pn-bottom:hover .pn-tooltip,
+            .pn-bottom.is-active .pn-tooltip { transform: translateX(-50%) translateY(0); }
+            /* SVG keyframes */
+            @keyframes pg-pulse  { 0% { transform: scale(1); opacity: 0.7; } 100% { transform: scale(1.62); opacity: 0; } }
+            @keyframes pg-dash   { to { stroke-dashoffset: 0; } }
+            @keyframes pg-rotate { to { transform: rotate(360deg); } }
+            @keyframes pg-travel { from { stroke-dashoffset: 1680; } to { stroke-dashoffset: -12; } }
+            @keyframes pg-breathe{ 0%,100%{opacity:0.8;} 50%{opacity:1;} }
+            @keyframes pg-blink  { 0%,100%{opacity:1;} 50%{opacity:0.28;} }
+            .pg-pulse-ring { transform-box: fill-box; transform-origin: center; }
+            .pg-rot  { transform-box: fill-box; transform-origin: center; animation: pg-rotate 14s linear infinite; }
+            .pg-hub  { transform-box: fill-box; transform-origin: center; animation: pg-breathe 3.2s ease-in-out infinite; }
+            .pillar-proof-grid {
+                display: grid;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                gap: 10px;
+                margin-top: clamp(18px, 3vw, 34px);
+            }
+            .pillar-proof-card {
+                min-height: 176px;
+                padding: 20px;
+                background: #ffffff;
+                border: 1px solid rgba(15, 6, 26, 0.08);
+                box-shadow: 0 18px 50px rgba(30, 32, 56, 0.07);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 18px;
+                transition: border-color 0.32s ease, box-shadow 0.32s ease, transform 0.32s ease, background 0.32s ease;
+                will-change: transform, opacity;
+            }
+            .pillar-proof-card.is-active {
+                transform: translateY(-8px);
+                border-color: rgba(29, 232, 181, 0.52);
+                background: linear-gradient(180deg, #ffffff, #f7fffc);
+                box-shadow: 0 24px 76px rgba(29, 232, 181, 0.18), 0 18px 50px rgba(30, 32, 56, 0.08);
+            }
+            .pillar-proof-card span {
+                font-family: 'Bricolage Grotesque', sans-serif;
+                font-size: 10px;
+                font-weight: 700;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+                color: #4f46e5;
+            }
+            .pillar-proof-card strong {
+                display: block;
+                font-family: 'Bricolage Grotesque', sans-serif;
+                font-size: clamp(22px, 2vw, 28px);
+                line-height: 1;
+                letter-spacing: -0.04em;
+                color: #0f061a;
+                margin-bottom: 9px;
+            }
+            .pillar-proof-card p {
+                font-family: 'Plus Jakarta Sans', sans-serif;
+                font-size: 12.5px;
+                line-height: 1.62;
+                color: rgba(15, 6, 26, 0.55);
+                margin: 0;
+            }
+            /* ── Hover hint badge ── */
+            .diagram-hint {
+                position: absolute;
+                top: calc(100% + 20px);
+                left: 50%;
+                transform: translateX(-50%) translateY(0);
+                display: flex;
+                align-items: center;
+                gap: 7px;
+                padding: 7px 14px 7px 10px;
+                background: rgba(109, 40, 217, 0.06);
+                border: 1px solid rgba(109, 40, 217, 0.2);
+                border-radius: 999px;
+                pointer-events: none;
+                z-index: 11;
+                white-space: nowrap;
+                animation: hint-float 2.6s ease-in-out infinite;
+                transition: opacity 0.35s ease;
+            }
+            .diagram-hint svg { flex-shrink: 0; width: 11px; height: 14px; }
+            .diagram-hint span {
+                font-family: 'Bricolage Grotesque', sans-serif;
+                font-size: 10px;
+                font-weight: 700;
+                letter-spacing: 0.14em;
+                text-transform: uppercase;
+                color: rgba(109, 40, 217, 0.65);
+            }
+            .pillars-diagram:hover .diagram-hint {
+                opacity: 0;
+            }
+            @keyframes hint-float {
+                0%, 100% { opacity: 0.52; transform: translateX(-50%) translateY(0px); }
+                50%       { opacity: 1;    transform: translateX(-50%) translateY(-4px); }
+            }
+            /* ── Desktop: split layout, hide mobile cards ── */
+            @media (min-width: 768px) {
+                .pillar-proof-grid { display: none; }
+            }
+            /* ── Mobile: proof-grid only, hide split ── */
+            @media (max-width: 767px) {
+                .pillars-split { display: none; }
+                .pillar-proof-grid { grid-template-columns: 1fr 1fr; }
+            }
+            @media (max-width: 640px) {
+                .pillar-proof-grid { grid-template-columns: 1fr; }
+                .pillar-proof-card { min-height: 150px; }
+            }
+        </style>
+
+        <div class="pillars-card">
+            <div class="pillars-header">
+                <div>
+                    <span class="pillars-eyebrow">How it connects</span>
+                    <h2 class="pillars-title">The growth pillars that compound</h2>
+                </div>
+            </div>
+
+            <div class="pillars-split">
+            <div class="pillars-left-panel" aria-live="polite">
+
+                <!-- 0 · Media Buying -->
+                <div class="pillar-detail" data-pillar="0">
+                    <div class="pillar-detail-inner">
+                        <div class="pillar-detail-image">
+                            <img src="https://picsum.photos/seed/mediabuy/800/450" alt="" loading="lazy" decoding="async">
+                        </div>
+                        <div class="pillar-detail-card">
+                            <div class="pn-tooltip-icon">
+                                <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <polygon points="11,2 17,7 11,10 5,7"   fill="rgba(109,40,217,0.88)"/>
+                                    <polygon points="11,7 17,12 11,16 5,12"  fill="rgba(109,40,217,0.62)"/>
+                                    <polygon points="11,13 16,17 11,20 6,17" fill="rgba(109,40,217,0.38)"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="pn-tooltip-label">Media Buying</span>
+                                <p class="pn-tooltip-text">Precision spend across high-intent channels — scaled for accelerated, measurable growth.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1 · Creative Strategy -->
+                <div class="pillar-detail" data-pillar="1">
+                    <div class="pillar-detail-inner">
+                        <div class="pillar-detail-image">
+                            <img src="https://picsum.photos/seed/creative7/800/450" alt="" loading="lazy" decoding="async">
+                        </div>
+                        <div class="pillar-detail-card">
+                            <div class="pn-tooltip-icon">
+                                <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 1 L12.8 9.2 L21 11 L12.8 12.8 L11 21 L9.2 12.8 L1 11 L9.2 9.2 Z" fill="rgba(147,51,234,0.85)"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="pn-tooltip-label">Creative Strategy</span>
+                                <p class="pn-tooltip-text">Performance-driven creative built to convert — across every format and channel.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 · Data Analysis -->
+                <div class="pillar-detail" data-pillar="2">
+                    <div class="pillar-detail-inner">
+                        <div class="pillar-detail-image">
+                            <img src="https://picsum.photos/seed/dataintel/800/450" alt="" loading="lazy" decoding="async">
+                        </div>
+                        <div class="pillar-detail-card">
+                            <div class="pn-tooltip-icon">
+                                <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="11" cy="11" r="9"   stroke="rgba(109,40,217,0.72)" stroke-width="1.4"/>
+                                    <circle cx="11" cy="11" r="5.5" stroke="rgba(109,40,217,0.52)" stroke-width="1.2"/>
+                                    <circle cx="11" cy="11" r="2.5" fill="rgba(109,40,217,0.85)"   stroke="none"/>
+                                    <circle cx="11" cy="2"  r="1.5" fill="rgba(109,40,217,0.65)"   stroke="none"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="pn-tooltip-label">Data Analysis</span>
+                                <p class="pn-tooltip-text">Raw signals into clear decisions — attribution, funnel analytics, dashboards that make sense.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 · Business Outcomes -->
+                <div class="pillar-detail" data-pillar="3">
+                    <div class="pillar-detail-inner">
+                        <div class="pillar-detail-image">
+                            <img src="https://picsum.photos/seed/bizgrowth/800/450" alt="" loading="lazy" decoding="async">
+                        </div>
+                        <div class="pillar-detail-card">
+                            <div class="pn-tooltip-icon">
+                                <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2"  y="12" width="5" height="8"  rx="1" fill="rgba(109,40,217,0.4)"/>
+                                    <rect x="8"  y="8"  width="5" height="12" rx="1" fill="rgba(109,40,217,0.62)"/>
+                                    <rect x="14" y="3"  width="5" height="17" rx="1" fill="rgba(109,40,217,0.85)"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="pn-tooltip-label">Business Outcomes</span>
+                                <p class="pn-tooltip-text">Every decision ties back to pipeline, revenue, and growth metrics that move the business forward.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /.pillars-left-panel -->
+
+            <div class="pillars-diagram">
+                <svg class="pillars-svg" viewBox="70 0 760 480" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <defs>
+                        <filter id="pg-glow" x="-60%" y="-60%" width="220%" height="220%">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="4.5" result="b"/>
+                            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                        </filter>
+                        <filter id="pg-glow-lg" x="-100%" y="-100%" width="300%" height="300%">
+                            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="b"/>
+                            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                        </filter>
+                        <radialGradient id="pg-hub-bg" cx="40%" cy="35%" r="65%">
+                            <stop offset="0%" stop-color="#ede9fe"/>
+                            <stop offset="100%" stop-color="#f5f3ff"/>
+                        </radialGradient>
+                        <radialGradient id="pg-node-bg" cx="40%" cy="35%" r="65%">
+                            <stop offset="0%" stop-color="#f5f3ff"/>
+                            <stop offset="100%" stop-color="#faf5ff"/>
+                        </radialGradient>
+                        <linearGradient id="pg-ring-grad" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#6d28d9"/>
+                            <stop offset="100%" stop-color="#9333ea"/>
+                        </linearGradient>
+                        <linearGradient id="pg-line-h" x1="0" y1="0" x2="900" y2="0" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#6d28d9"/>
+                            <stop offset="50%" stop-color="#7c3aed"/>
+                            <stop offset="100%" stop-color="#9333ea"/>
+                        </linearGradient>
+                        <linearGradient id="pg-line-v" x1="0" y1="0" x2="0" y2="480" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#6d28d9"/>
+                            <stop offset="100%" stop-color="#9333ea"/>
+                        </linearGradient>
+                    </defs>
+
+                    <!-- Ambient glow (subtle purple tint on white) -->
+                    <ellipse cx="450" cy="240" rx="200" ry="140" fill="#7c3aed" opacity="0.05" filter="url(#pg-glow-lg)"/>
+                    <ellipse cx="450" cy="240" rx="340" ry="220" fill="#9333ea" opacity="0.03" filter="url(#pg-glow-lg)"/>
+
+                    <!-- Static spoke paths -->
+                    <line x1="450" y1="188" x2="450" y2="106" stroke="#6d28d9" stroke-width="0.8" opacity="0.2"/>
+                    <line x1="502" y1="240" x2="714" y2="240" stroke="#6d28d9" stroke-width="0.8" opacity="0.2"/>
+                    <line x1="398" y1="240" x2="186" y2="240" stroke="#6d28d9" stroke-width="0.8" opacity="0.2"/>
+                    <line x1="450" y1="292" x2="450" y2="374" stroke="#6d28d9" stroke-width="0.8" opacity="0.2"/>
+
+                    <!-- Static synergy circuit oval -->
+                    <path d="M450,68 C638,68 752,148 752,240 C752,332 638,412 450,412 C262,412 148,332 148,240 C148,148 262,68 450,68" fill="none" stroke="#6d28d9" stroke-width="0.9" opacity="0.15"/>
+
+                    <!-- Animated dashes on spokes -->
+                    <line x1="450" y1="188" x2="450" y2="106" stroke="url(#pg-line-v)" stroke-width="1.6" stroke-dasharray="5 9" stroke-linecap="round" style="stroke-dashoffset:14;animation:pg-dash 1.9s linear infinite"/>
+                    <line x1="502" y1="240" x2="714" y2="240" stroke="url(#pg-line-h)" stroke-width="1.6" stroke-dasharray="5 9" stroke-linecap="round" style="stroke-dashoffset:14;animation:pg-dash 1.9s linear infinite 0.45s"/>
+                    <line x1="398" y1="240" x2="186" y2="240" stroke="url(#pg-line-h)" stroke-width="1.6" stroke-dasharray="5 9" stroke-linecap="round" style="stroke-dashoffset:14;animation:pg-dash 1.9s linear infinite 0.9s"/>
+                    <line x1="450" y1="292" x2="450" y2="374" stroke="url(#pg-line-v)" stroke-width="1.6" stroke-dasharray="5 9" stroke-linecap="round" style="stroke-dashoffset:14;animation:pg-dash 1.9s linear infinite 1.35s"/>
+
+                    <!-- Animated dash on circuit -->
+                    <path d="M450,68 C638,68 752,148 752,240 C752,332 638,412 450,412 C262,412 148,332 148,240 C148,148 262,68 450,68" fill="none" stroke="url(#pg-ring-grad)" stroke-width="1.4" stroke-dasharray="6 12" stroke-linecap="round" style="stroke-dashoffset:18;animation:pg-dash 3.2s linear infinite"/>
+
+                    <!-- Traveling dot -->
+                    <path d="M450,68 C638,68 752,148 752,240 C752,332 638,412 450,412 C262,412 148,332 148,240 C148,148 262,68 450,68" fill="none" stroke="#6d28d9" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="9 1671" style="animation:pg-travel 7s linear infinite" filter="url(#pg-glow)"/>
+
+                    <!-- Junction blink dots -->
+                    <circle cx="450" cy="192" r="3.5" fill="#7c3aed" opacity="0.7" style="animation:pg-blink 2.1s ease-in-out infinite"/>
+                    <circle cx="450" cy="288" r="3.5" fill="#7c3aed" opacity="0.7" style="animation:pg-blink 2.1s ease-in-out infinite 0.55s"/>
+                    <circle cx="504" cy="240" r="3.5" fill="#7c3aed" opacity="0.7" style="animation:pg-blink 2.1s ease-in-out infinite 1.05s"/>
+                    <circle cx="396" cy="240" r="3.5" fill="#7c3aed" opacity="0.7" style="animation:pg-blink 2.1s ease-in-out infinite 1.6s"/>
+
+                    <!-- ══════════ CENTER HUB cx=450 cy=240 ══════════ -->
+                    <circle cx="450" cy="240" r="52" fill="url(#pg-hub-bg)"/>
+                    <circle cx="450" cy="240" r="65" fill="none" stroke="url(#pg-ring-grad)" stroke-width="0.9" stroke-dasharray="6 5" opacity="0.35" class="pg-rot" style="animation-duration:22s"/>
+                    <circle cx="450" cy="240" r="52" fill="none" stroke="#7c3aed" stroke-width="1.2" class="pg-pulse-ring" style="animation:pg-pulse 4s ease-out infinite"/>
+                    <circle cx="450" cy="240" r="52" fill="none" stroke="#6d28d9" stroke-width="1.1" class="pg-pulse-ring" style="animation:pg-pulse 4s ease-out infinite 1.6s"/>
+                    <circle cx="450" cy="240" r="52" fill="none" stroke="url(#pg-ring-grad)" stroke-width="2.4" class="pg-hub" filter="url(#pg-glow)"/>
+                    <g transform="translate(450,240)" class="pg-hub">
+                        <circle cx="0"   cy="0"   r="5"   fill="rgba(109,40,217,0.88)"/>
+                        <circle cx="0"   cy="-21" r="3.5" fill="rgba(109,40,217,0.45)"/>
+                        <circle cx="18"  cy="-10" r="3.5" fill="rgba(109,40,217,0.45)"/>
+                        <circle cx="18"  cy="10"  r="3.5" fill="rgba(109,40,217,0.45)"/>
+                        <circle cx="0"   cy="21"  r="3.5" fill="rgba(109,40,217,0.45)"/>
+                        <circle cx="-18" cy="10"  r="3.5" fill="rgba(109,40,217,0.45)"/>
+                        <circle cx="-18" cy="-10" r="3.5" fill="rgba(109,40,217,0.45)"/>
+                        <g stroke="rgba(109,40,217,0.2)" stroke-width="1.2">
+                            <line x1="0" y1="0" x2="0"   y2="-21"/>
+                            <line x1="0" y1="0" x2="18"  y2="-10"/>
+                            <line x1="0" y1="0" x2="18"  y2="10"/>
+                            <line x1="0" y1="0" x2="0"   y2="21"/>
+                            <line x1="0" y1="0" x2="-18" y2="10"/>
+                            <line x1="0" y1="0" x2="-18" y2="-10"/>
+                        </g>
+                    </g>
+
+                    <!-- ══════════ MEDIA BUYING cx=450 cy=68 ══════════ -->
+                    <circle cx="450" cy="68" r="38" fill="url(#pg-node-bg)"/>
+                    <circle cx="450" cy="68" r="38" fill="none" stroke="#7c3aed" stroke-width="1.1" class="pg-pulse-ring" style="animation:pg-pulse 3.6s ease-out infinite 0.3s"/>
+                    <circle cx="450" cy="68" r="38" fill="none" stroke="#7c3aed" stroke-width="2" filter="url(#pg-glow)"/>
+                    <circle cx="450" cy="68" r="46" fill="none" stroke="#7c3aed" stroke-width="0.7" opacity="0.2"/>
+                    <circle cx="450" cy="68" r="53" fill="none" stroke="#6d28d9" stroke-width="1" stroke-dasharray="4 5" opacity="0.28" class="pg-rot" style="animation-duration:11s;animation-direction:reverse"/>
+                    <g transform="translate(450,68)">
+                        <polygon points="0,-19 8,-11 0,-7 -8,-11"   fill="rgba(109,40,217,0.88)"/>
+                        <polygon points="0,-9  10,1  0,6  -10,1"    fill="rgba(109,40,217,0.62)"/>
+                        <polygon points="0,0   12,10 0,15 -12,10"   fill="rgba(109,40,217,0.38)"/>
+                        <polyline points="-4,-25 0,-31 4,-25" fill="none" stroke="rgba(147,51,234,0.9)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                    <text x="450" y="12" text-anchor="middle" font-family="'Bricolage Grotesque',sans-serif" font-size="11" font-weight="700" letter-spacing="0.15em" fill="rgba(15,6,26,0.62)">MEDIA BUYING</text>
+
+                    <!-- ══════════ CREATIVE STRATEGY cx=752 cy=240 ══════════ -->
+                    <circle cx="752" cy="240" r="38" fill="url(#pg-node-bg)"/>
+                    <circle cx="752" cy="240" r="38" fill="none" stroke="#9333ea" stroke-width="1.1" class="pg-pulse-ring" style="animation:pg-pulse 3.6s ease-out infinite 0.9s"/>
+                    <circle cx="752" cy="240" r="38" fill="none" stroke="#9333ea" stroke-width="2" filter="url(#pg-glow)"/>
+                    <circle cx="752" cy="240" r="46" fill="none" stroke="#9333ea" stroke-width="0.7" opacity="0.18"/>
+                    <circle cx="752" cy="240" r="53" fill="none" stroke="#9333ea" stroke-width="1" stroke-dasharray="4 6" opacity="0.24" class="pg-rot" style="animation-duration:13s"/>
+                    <g transform="translate(752,240)" stroke="rgba(109,40,217,0.75)" stroke-width="2" stroke-linecap="round">
+                        <line x1="0" y1="-17" x2="0" y2="17"/>
+                        <line x1="-17" y1="0" x2="17" y2="0"/>
+                        <line x1="-10" y1="-10" x2="10" y2="10" stroke-width="1.3" opacity="0.52"/>
+                        <line x1="10" y1="-10" x2="-10" y2="10" stroke-width="1.3" opacity="0.52"/>
+                        <circle cx="0" cy="0" r="3.5" fill="rgba(147,51,234,0.88)" stroke="none"/>
+                    </g>
+                    <text x="812" y="232" text-anchor="start" font-family="'Bricolage Grotesque',sans-serif" font-size="11" font-weight="700" letter-spacing="0.15em" fill="rgba(15,6,26,0.62)">CREATIVE</text>
+                    <text x="812" y="248" text-anchor="start" font-family="'Bricolage Grotesque',sans-serif" font-size="11" font-weight="700" letter-spacing="0.15em" fill="rgba(15,6,26,0.62)">STRATEGY</text>
+
+                    <!-- ══════════ DATA ANALYSIS cx=148 cy=240 ══════════ -->
+                    <circle cx="148" cy="240" r="38" fill="url(#pg-node-bg)"/>
+                    <circle cx="148" cy="240" r="38" fill="none" stroke="#7c3aed" stroke-width="1.1" class="pg-pulse-ring" style="animation:pg-pulse 3.6s ease-out infinite 1.5s"/>
+                    <circle cx="148" cy="240" r="38" fill="none" stroke="#7c3aed" stroke-width="2" filter="url(#pg-glow)"/>
+                    <circle cx="148" cy="240" r="46" fill="none" stroke="#7c3aed" stroke-width="0.7" opacity="0.2"/>
+                    <circle cx="148" cy="240" r="53" fill="none" stroke="#6d28d9" stroke-width="1" stroke-dasharray="5 5" opacity="0.24" class="pg-rot" style="animation-duration:17s;animation-direction:reverse"/>
+                    <g transform="translate(148,240)" fill="none">
+                        <circle cx="0" cy="0" r="16.5" stroke="rgba(109,40,217,0.72)" stroke-width="1.5"/>
+                        <circle cx="0" cy="0" r="10.5" stroke="rgba(109,40,217,0.52)" stroke-width="1.3"/>
+                        <circle cx="0" cy="0" r="5"    stroke="rgba(109,40,217,0.34)" stroke-width="1.1"/>
+                        <circle cx="0" cy="0" r="2.5"  fill="rgba(109,40,217,0.85)"  stroke="none"/>
+                        <circle cx="0" cy="-16.5" r="2.2" fill="rgba(109,40,217,0.68)" stroke="none"/>
+                        <circle cx="16.5" cy="0"  r="1.8" fill="rgba(109,40,217,0.5)"  stroke="none"/>
+                    </g>
+                    <text x="88" y="232" text-anchor="end" font-family="'Bricolage Grotesque',sans-serif" font-size="11" font-weight="700" letter-spacing="0.15em" fill="rgba(15,6,26,0.62)">DATA</text>
+                    <text x="88" y="248" text-anchor="end" font-family="'Bricolage Grotesque',sans-serif" font-size="11" font-weight="700" letter-spacing="0.15em" fill="rgba(15,6,26,0.62)">ANALYSIS</text>
+
+                    <!-- ══════════ BUSINESS OUTCOMES cx=450 cy=412 ══════════ -->
+                    <circle cx="450" cy="412" r="38" fill="url(#pg-node-bg)"/>
+                    <circle cx="450" cy="412" r="38" fill="none" stroke="#7c3aed" stroke-width="1.1" class="pg-pulse-ring" style="animation:pg-pulse 3.6s ease-out infinite 2.1s"/>
+                    <circle cx="450" cy="412" r="38" fill="none" stroke="#7c3aed" stroke-width="2" filter="url(#pg-glow)"/>
+                    <circle cx="450" cy="412" r="46" fill="none" stroke="#7c3aed" stroke-width="0.7" opacity="0.18"/>
+                    <g transform="translate(450,412)">
+                        <rect x="-14" y="3"   width="7" height="10" rx="1.5" fill="rgba(109,40,217,0.4)"/>
+                        <rect x="-4"  y="-3"  width="7" height="16" rx="1.5" fill="rgba(109,40,217,0.62)"/>
+                        <rect x="6"   y="-10" width="7" height="23" rx="1.5" fill="rgba(109,40,217,0.85)"/>
+                        <line x1="-15" y1="13" x2="17" y2="13" stroke="rgba(109,40,217,0.22)" stroke-width="1"/>
+                        <polyline points="-4,-18 0,-24 4,-18" fill="none" stroke="rgba(147,51,234,0.88)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        <line x1="0" y1="-14" x2="0" y2="-24" stroke="rgba(147,51,234,0.88)" stroke-width="1.8" stroke-linecap="round"/>
+                    </g>
+                    <text x="450" y="468" text-anchor="middle" font-family="'Bricolage Grotesque',sans-serif" font-size="11" font-weight="700" letter-spacing="0.15em" fill="rgba(15,6,26,0.62)">BUSINESS OUTCOMES</text>
+
+                </svg>
+
+                <!-- ─── HTML hover tooltip nodes ─── -->
+
+                <!-- Media Buying — top -->
+                <div class="pn pn-top" tabindex="0" role="button" aria-label="Media Buying pillar">
+                    <div class="pn-tooltip">
+                        <div class="pn-tooltip-icon">
+                            <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <polygon points="11,2 17,7 11,10 5,7"    fill="rgba(109,40,217,0.88)"/>
+                                <polygon points="11,7 17,12 11,16 5,12"   fill="rgba(109,40,217,0.62)"/>
+                                <polygon points="11,13 16,17 11,20 6,17"  fill="rgba(109,40,217,0.38)"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="pn-tooltip-label">Media Buying</span>
+                            <p class="pn-tooltip-text">Precision spend across high-intent channels — scaled for accelerated, measurable growth.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Creative Strategy — right -->
+                <div class="pn pn-right" tabindex="0" role="button" aria-label="Creative Strategy pillar">
+                    <div class="pn-tooltip">
+                        <div class="pn-tooltip-icon">
+                            <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 1 L12.8 9.2 L21 11 L12.8 12.8 L11 21 L9.2 12.8 L1 11 L9.2 9.2 Z" fill="rgba(147,51,234,0.85)"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="pn-tooltip-label">Creative Strategy</span>
+                            <p class="pn-tooltip-text">Performance-driven creative built to convert — across every format and channel.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Analysis — left -->
+                <div class="pn pn-left" tabindex="0" role="button" aria-label="Data Analysis pillar">
+                    <div class="pn-tooltip">
+                        <div class="pn-tooltip-icon">
+                            <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11" cy="11" r="9"   stroke="rgba(109,40,217,0.72)"  stroke-width="1.4"/>
+                                <circle cx="11" cy="11" r="5.5" stroke="rgba(109,40,217,0.52)"  stroke-width="1.2"/>
+                                <circle cx="11" cy="11" r="2.5" fill="rgba(109,40,217,0.85)"    stroke="none"/>
+                                <circle cx="11" cy="2"  r="1.5" fill="rgba(109,40,217,0.65)"    stroke="none"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="pn-tooltip-label">Data Analysis</span>
+                            <p class="pn-tooltip-text">Raw signals into clear decisions — attribution, funnel analytics, dashboards that make sense.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Outcomes — bottom -->
+                <div class="pn pn-bottom" tabindex="0" role="button" aria-label="Business Outcomes pillar">
+                    <div class="pn-tooltip">
+                        <div class="pn-tooltip-icon">
+                            <svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2"  y="12" width="5" height="8"  rx="1" fill="rgba(109,40,217,0.4)"/>
+                                <rect x="8"  y="8"  width="5" height="12" rx="1" fill="rgba(109,40,217,0.62)"/>
+                                <rect x="14" y="3"  width="5" height="17" rx="1" fill="rgba(109,40,217,0.85)"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="pn-tooltip-label">Business Outcomes</span>
+                            <p class="pn-tooltip-text">Every decision ties back to pipeline, revenue, and growth metrics that move the business forward.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hover hint -->
+                <div class="diagram-hint" aria-hidden="true">
+                    <svg width="20" height="26" viewBox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1.5V13L4 10.5L6 15L7.5 14L5.5 9.5H9.5L1 1.5Z" fill="rgba(109,40,217,0.75)" stroke="rgba(109,40,217,0.9)" stroke-width="0.7" stroke-linejoin="round" stroke-linecap="round"/>
+                    </svg>
+                    <span>Hover to explore</span>
+                </div>
+            </div><!-- /.pillars-diagram -->
+            </div><!-- /.pillars-split -->
+
+            <div class="pillar-proof-grid" aria-label="Growth pillar outcomes">
+                <article class="pillar-proof-card">
+                    <span>01 / Media buying</span>
+                    <div>
+                        <strong>Spend follows signal.</strong>
+                        <p>Budgets move toward audiences, offers, and channels that prove they can create profitable demand.</p>
+                    </div>
+                </article>
+                <article class="pillar-proof-card">
+                    <span>02 / Creative strategy</span>
+                    <div>
+                        <strong>Creative gets tested.</strong>
+                        <p>Angles, hooks, and formats are built as experiments, not one-off assets waiting for a verdict.</p>
+                    </div>
+                </article>
+                <article class="pillar-proof-card">
+                    <span>03 / Data analysis</span>
+                    <div>
+                        <strong>Reports become decisions.</strong>
+                        <p>Funnel, attribution, and cohort data are translated into the next move for spend, offer, and creative.</p>
+                    </div>
+                </article>
+                <article class="pillar-proof-card">
+                    <span>04 / Business outcomes</span>
+                    <div>
+                        <strong>Growth ties to revenue.</strong>
+                        <p>The system optimizes toward pipeline, payback, contribution margin, and the metrics leadership cares about.</p>
+                    </div>
+                </article>
+            </div>
+        </div><!-- /.pillars-card -->
+    </section><!-- /.pillars-section -->
+
+    <!-- FAQ -->
+    <section class="faq-section" id="faq" data-screen-label="05 FAQ" data-nav-section="faq">
+        <div class="faq-star" aria-hidden="true">
+            <svg viewBox="0 0 100 100" focusable="false">
+                <path d="M50 0C56 32 68 44 100 50C68 56 56 68 50 100C44 68 32 56 0 50C32 44 44 32 50 0Z" fill="currentColor"/>
+            </svg>
+        </div>
+
+        <div class="faq-inner">
+            <div class="faq-copy">
+                <h2 class="faq-title">Our FAQ</h2>
+                <p class="faq-intro">Everything you need to know before working with Performore.</p>
+            </div>
+
+            <div class="faq-visual" aria-hidden="true">
+                <img src="https://cdn.prod.website-files.com/696ba2fe2c27a2f3d2073213/697dce857492ed77fe130ea0_images%20(5).avif" alt="" loading="lazy" decoding="async">
+            </div>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span class="faq-icon" aria-hidden="true">
+                            <span class="faq-plus"></span>
+                        </span>
+                        <span class="faq-question-text">You are NOT an agency. So what are you?</span>
+                    </button>
+                    <div class="faq-answer-wrap">
+                        <div class="faq-answer-clip">
+                            <p class="faq-answer">Quality over quantity. Agencies are a great fit for some businesses, but start-ups and scale-ups often need a more personalised approach.<br><br>We work with fewer companies so we can provide deeper support, more focused time and a genuinely hands-on service. Every client should feel as though they&rsquo;ve hired an almost full-time growth team.<br><br>We&rsquo;re the non-in-house team that understands everything growth: from unit economics to office politics.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span class="faq-icon" aria-hidden="true">
+                            <span class="faq-plus"></span>
+                        </span>
+                        <span class="faq-question-text">Who is Performore for?</span>
+                    </button>
+                    <div class="faq-answer-wrap">
+                        <div class="faq-answer-clip">
+                            <p class="faq-answer">Performore works with start-ups and scale-ups that have found traction and are ready to grow more efficiently.<br><br>We are best suited to founder-led and growth-stage businesses that need senior strategic thinking, hands-on execution and one team connecting media, creative, data and commercial performance.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span class="faq-icon" aria-hidden="true">
+                            <span class="faq-plus"></span>
+                        </span>
+                        <span class="faq-question-text">What does Performore actually do?</span>
+                    </button>
+                    <div class="faq-answer-wrap">
+                        <div class="faq-answer-clip">
+                            <p class="faq-answer">We build and run the systems that drive profitable growth.<br><br>That includes growth strategy, paid media, creative strategy, tracking, measurement and algorithm training. We connect every part of the process, from identifying the right business metrics to testing, learning and scaling what works.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" type="button" aria-expanded="false">
+                        <span class="faq-icon" aria-hidden="true">
+                            <span class="faq-plus"></span>
+                        </span>
+                        <span class="faq-question-text">How do you measure growth marketing performance?</span>
+                    </button>
+                    <div class="faq-answer-wrap">
+                        <div class="faq-answer-clip">
+                            <p class="faq-answer">We focus on business outcomes, not surface-level platform metrics.<br><br>Depending on the business, that can include customer acquisition cost, contribution margin, payback period, conversion rate, lifetime value and overall revenue efficiency. Clicks and leads matter, but only when they contribute to sustainable growth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOK A CALL CTA -->
+    <section class="book-call-section" id="book-call" data-screen-label="Book a call">
+        <div class="book-call-inner">
+            <div class="book-call-copy">
+                <span class="book-call-kicker">Ready when you are</span>
+                <h2 class="book-call-title">From Seed to Series-C. We were in the room.</h2>
+                <p class="book-call-text">Bring the messy bits. We will help you sort the signal from the noise and map the next few smart steps to build a pipeline and optimise your growth marketing.</p>
+                <a class="book-call-button" href="javascript:void(0)" aria-label="Book a growth call with Performore" data-cal-link="morsofer/25-mins-with-performore" data-cal-namespace="25-mins-with-performore" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+                    <span>Book a call</span>
+                    <span class="book-call-button-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+
+            <div class="book-call-visual" aria-label="Founder-led growth call">
+                <span class="book-call-ring book-call-ring-one" aria-hidden="true"></span>
+                <span class="book-call-ring book-call-ring-two" aria-hidden="true"></span>
+                <span class="book-call-arc" aria-hidden="true"></span>
+
+                <div class="book-call-photo">
+                    <img src="image_assets/hero_photos/Mor_webp.webp" alt="Mor from Performore" loading="lazy" decoding="async">
+                </div>
+
+                <a class="book-call-orbit" href="javascript:void(0)" aria-label="Book a growth call" data-cal-link="morsofer/25-mins-with-performore" data-cal-namespace="25-mins-with-performore" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+
+                <div class="book-call-tags" aria-label="Growth areas">
+                    <span>Strategy</span>
+                    <span>Data</span>
+                    <span>Creative</span>
+                    <span>Media</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <a href="#home" class="footer-logo" aria-label="Performore">
+                <img src="image_assets/performore_brand_logo_white.webp" alt="Performore" loading="lazy" decoding="async">
+            </a>
+            <nav class="footer-links" aria-label="Footer">
+                <a href="#home">Home</a>
+                <a href="#clients">Clients</a>
+                <a href="#results">Results</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+            <a href="javascript:void(0)" class="footer-cta" data-cal-link="morsofer/25-mins-with-performore" data-cal-namespace="25-mins-with-performore" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>Start growth sprint</a>
+        </div>
+        <div class="site-footer-services">
+            <span class="footer-services-lbl">What we do</span>
+            <nav class="footer-services-links" aria-label="Services">
+                <a href="growth-strategy.html">Growth Strategy</a>
+                <a href="algorithm-training.html">Algorithm Training</a>
+                <a href="creative-strategy.html">Creative Strategy</a>
+                <a href="media-buying.html">Media Buying</a>
+            </nav>
+        </div>
+        <div class="site-footer-meta">
+            <div class="footer-meta-contact">
+                <a href="mailto:hello@performore.co">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                    hello@performore.co
+                </a>
+                <a href="https://www.linkedin.com/company/107313126/" target="_blank" rel="noopener noreferrer" aria-label="Performore on LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    LinkedIn
+                </a>
+            </div>
+            <nav class="footer-legal-nav" aria-label="Legal">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="cookie-policy.html">Cookie Policy</a>
+            </nav>
+        </div>
+        <div class="site-footer-bottom">
+            <p class="footer-legal-text">&copy; 2026 Performore. MSMC Limited Ltd (trading as Performore) is a company registered in England, company number 16695823.</p>
+        </div>
+    </footer>
+
+
+    <div class="theme-curtain" id="themeCurtain" aria-hidden="true"></div>
+    <div class="curtain-text-overlay" id="curtainTextOverlay" aria-hidden="true"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script type="text/javascript">
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+      Cal("init", "25-mins-with-performore", {origin:"https://app.cal.com"});
+      Cal.config = Cal.config || {};
+      Cal.config.forwardQueryParams = true;
+      Cal.ns["25-mins-with-performore"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#7C2BBF"},"dark":{"cal-brand":"#7C2BBF"}},"hideEventTypeDetails":false,"layout":"month_view"});
+    </script>
+
+    <!-- Cookie consent (Google Consent Mode v2) -->
+    <script src="scripts/mobile-nav.js" defer></script>
+    <script src="scripts/consent.js" defer></script>
+
+</body>
+</html>

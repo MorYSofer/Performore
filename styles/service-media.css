@@ -1,0 +1,397 @@
+/* ─── MEDIA BUYING PAGE ───
+   Cockpit / portfolio flavour: blue accent, allocation bar, rule cells.
+   Loaded after service-page.css; pg-media scoped. */
+
+/* Accent: blue leads this page */
+.pg-media .sp-crumb-chip {
+    border-color: rgba(79, 122, 244, 0.4);
+    background: rgba(79, 122, 244, 0.07);
+    color: rgba(140, 168, 250, 0.92);
+}
+
+.pg-media .sp-grad {
+    background: linear-gradient(92deg, #8ca8fa 0%, #4f7af4 52%, #1de8b5 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pg-media .sp-eyebrow { color: rgba(122, 156, 248, 0.72); }
+
+.pg-media .sp-hero {
+    background:
+        radial-gradient(ellipse 64% 52% at 30% 34%, rgba(79, 122, 244, 0.15), transparent 68%),
+        radial-gradient(ellipse 46% 36% at 82% 24%, rgba(29, 232, 181, 0.05), transparent 64%),
+        radial-gradient(ellipse 44% 34% at 74% 78%, rgba(79, 122, 244, 0.05), transparent 62%),
+        var(--bg);
+}
+
+/* ── Hero widget: allocation rows ── */
+.mb-alloc-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mb-alloc-row {
+    display: grid;
+    grid-template-columns: 52px minmax(0, 1fr) 30px;
+    align-items: center;
+    gap: 8px;
+}
+
+.mb-alloc-name {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: rgba(255, 255, 255, 0.62);
+}
+
+.mb-alloc-track {
+    height: 5px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.07);
+    overflow: hidden;
+}
+
+.mb-alloc-fill {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, rgba(79, 122, 244, 0.9), rgba(122, 156, 248, 0.75));
+}
+
+.mb-alloc-val {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.44);
+    text-align: right;
+}
+
+/* ── Hero widget: pacing ── */
+.mb-pace-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 9px;
+}
+
+.mb-pace-val {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--white);
+}
+
+.mb-pace-chip {
+    padding: 3px 9px;
+    border-radius: 999px;
+    border: 1px solid rgba(29, 232, 181, 0.34);
+    background: rgba(29, 232, 181, 0.05);
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(29, 232, 181, 0.85);
+}
+
+.mb-pace-track {
+    height: 6px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.07);
+    overflow: hidden;
+}
+
+.mb-pace-fill {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #4f7af4, #1de8b5);
+    box-shadow: 0 0 12px rgba(29, 232, 181, 0.35);
+}
+
+.mb-pace-foot {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.mb-pace-foot span {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 8px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.26);
+}
+
+/* ═══ Allocation section ════════════════════════════════════════════ */
+.mb-alloc-section {
+    position: relative;
+    padding: var(--section-y) var(--section-x);
+    background:
+        radial-gradient(ellipse 56% 44% at 76% 22%, rgba(79, 122, 244, 0.08), transparent 64%),
+        radial-gradient(ellipse 44% 36% at 14% 76%, rgba(29, 232, 181, 0.04), transparent 60%),
+        linear-gradient(180deg, var(--bg) 0%, #07090f 52%, var(--bg) 100%);
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.mb-alloc-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.024) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+    background-size: 46px 46px;
+    mask-image: radial-gradient(circle at 50% 42%, black 0%, transparent 72%);
+    -webkit-mask-image: radial-gradient(circle at 50% 42%, black 0%, transparent 72%);
+    opacity: 0.48;
+}
+
+.mb-alloc-inner {
+    position: relative;
+    z-index: 1;
+    width: min(var(--page-max), 100%);
+    margin: 0 auto;
+}
+
+.mb-alloc-head {
+    max-width: 680px;
+    margin-bottom: clamp(40px, 6vh, 66px);
+}
+
+/* The 70/20/10 bar */
+.mb-bar {
+    display: flex;
+    gap: 6px;
+    margin-bottom: clamp(40px, 6vh, 64px);
+}
+
+.mb-bar-seg {
+    position: relative;
+    min-width: 0;
+    height: clamp(84px, 10vw, 128px);
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.mb-seg-fill {
+    position: absolute;
+    inset: 0;
+    will-change: transform;
+}
+
+.mb-seg-proven .mb-seg-fill {
+    background: linear-gradient(90deg, rgba(79, 122, 244, 0.5), rgba(79, 122, 244, 0.28));
+}
+
+.mb-seg-promising .mb-seg-fill {
+    background: linear-gradient(90deg, rgba(29, 232, 181, 0.4), rgba(29, 232, 181, 0.2));
+}
+
+.mb-seg-experiment .mb-seg-fill {
+    background: linear-gradient(90deg, rgba(192, 64, 230, 0.42), rgba(192, 64, 230, 0.22));
+}
+
+.mb-seg-pct {
+    position: absolute;
+    left: clamp(12px, 1.6vw, 22px);
+    top: clamp(10px, 1.4vw, 18px);
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(20px, 2.4vw, 36px);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    color: var(--white);
+}
+
+.mb-seg-lbl {
+    position: absolute;
+    left: clamp(12px, 1.6vw, 22px);
+    bottom: clamp(10px, 1.4vw, 16px);
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(8.5px, 0.8vw, 10.5px);
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    white-space: nowrap;
+}
+
+/* Platform roles */
+.mb-platforms {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mb-platform {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: clamp(20px, 2.2vw, 30px) clamp(16px, 1.8vw, 24px);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background 0.36s var(--ease-luxe);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .mb-platform:hover { background: rgba(79, 122, 244, 0.045); }
+}
+
+.mb-platform-name {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(16px, 1.4vw, 20px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--white);
+}
+
+.mb-platform-role {
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12.5px;
+    font-weight: 500;
+    line-height: 1.56;
+    letter-spacing: -0.015em;
+    color: rgba(255, 255, 255, 0.46);
+    flex: 1;
+}
+
+.mb-platform-chip {
+    align-self: flex-start;
+    padding: 4px 11px;
+    border-radius: 999px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.mb-platform-chip.is-proven {
+    border: 1px solid rgba(79, 122, 244, 0.42);
+    background: rgba(79, 122, 244, 0.07);
+    color: rgba(140, 168, 250, 0.92);
+}
+
+.mb-platform-chip.is-promising {
+    border: 1px solid rgba(29, 232, 181, 0.36);
+    background: rgba(29, 232, 181, 0.05);
+    color: rgba(29, 232, 181, 0.85);
+}
+
+.mb-platform-chip.is-experiment {
+    border: 1px solid rgba(192, 64, 230, 0.38);
+    background: rgba(192, 64, 230, 0.06);
+    color: rgba(220, 140, 245, 0.9);
+}
+
+/* ═══ Rulebook ══════════════════════════════════════════════════════ */
+.mb-rules-section {
+    position: relative;
+    padding: var(--section-y) var(--section-x);
+    background:
+        radial-gradient(ellipse 50% 40% at 18% 24%, rgba(79, 122, 244, 0.05), transparent 60%),
+        var(--bg);
+}
+
+.mb-rules-inner {
+    width: min(var(--page-max), 100%);
+    margin: 0 auto;
+}
+
+.mb-rules-head {
+    max-width: 680px;
+    margin-bottom: clamp(38px, 5vh, 58px);
+}
+
+.mb-rules {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.mb-rule {
+    position: relative;
+    padding: clamp(26px, 3vw, 40px) clamp(24px, 2.8vw, 38px);
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.012)),
+        rgba(8, 9, 15, 0.72);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.06),
+        0 20px 60px rgba(2, 4, 14, 0.4);
+    transition: border-color 0.36s var(--ease-luxe), transform 0.36s var(--ease-luxe);
+    will-change: transform, opacity;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .mb-rule:hover {
+        transform: translateY(-4px);
+        border-color: rgba(79, 122, 244, 0.4);
+    }
+}
+
+.mb-rule-idx {
+    display: inline-block;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    color: rgba(122, 156, 248, 0.7);
+    margin-bottom: 14px;
+}
+
+.mb-rule-title {
+    margin: 0;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(20px, 1.9vw, 28px);
+    font-weight: 800;
+    letter-spacing: -0.035em;
+    line-height: 1.1;
+    color: var(--white);
+}
+
+.mb-rule-copy {
+    margin: 12px 0 0;
+    max-width: 52ch;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(13.5px, 1vw, 15.5px);
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: -0.015em;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Proof tile accent: blue pop */
+.mb-proof-section .sp-tile:nth-child(2) .sp-tile-val { color: rgba(140, 168, 250, 0.95); }
+.mb-proof-section .sp-tile:nth-child(3) .sp-tile-val { color: var(--teal); }
+
+/* ═══ Responsive ════════════════════════════════════════════════════ */
+@media (max-width: 1100px) {
+    .mb-platforms { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 760px) {
+    .mb-platforms { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .mb-rules { grid-template-columns: 1fr; }
+    .mb-bar { flex-direction: column; gap: 8px; }
+    .mb-bar-seg { width: 100% !important; height: 72px; }
+    .mb-seg-pct { font-size: 24px; }
+}
+
+@media (max-width: 480px) {
+    .mb-platforms { grid-template-columns: 1fr; }
+}

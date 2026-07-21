@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Consent Mode v2 — default state (must load before Google Tag Manager) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'personalization_storage': 'denied',
+        'functionality_storage': 'granted',
+        'security_storage': 'granted',
+        'wait_for_update': 500
+      });
+      gtag('set', 'ads_data_redaction', true);
+      gtag('set', 'url_passthrough', true);
+      try {
+        var pmC = JSON.parse(localStorage.getItem('pm_consent') || 'null');
+        if (pmC && pmC.v === 2) {
+          gtag('consent', 'update', {
+            'ad_storage': pmC.ad ? 'granted' : 'denied',
+            'ad_user_data': pmC.ad ? 'granted' : 'denied',
+            'ad_personalization': pmC.ad ? 'granted' : 'denied',
+            'analytics_storage': pmC.an ? 'granted' : 'denied',
+            'personalization_storage': pmC.ad ? 'granted' : 'denied'
+          });
+          dataLayer.push({
+            'consent_ads': pmC.ad ? 'granted' : 'denied',
+            'consent_analytics': pmC.an ? 'granted' : 'denied'
+          });
+        }
+      } catch (e) {}
+    </script>
+    <!-- End Google Consent Mode v2 default -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M5ZBQRC5');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Buying — Performore</title>
+    <meta name="description" content="Media buying by Performore. Paid media run like a portfolio across Meta, Google, TikTok, LinkedIn and Microsoft — allocated by evidence, protected by kill rules, scaled on proof.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Dancing+Script:wght@700&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/refinements.css">
+    <link rel="stylesheet" href="styles/service-page.css">
+    <link rel="stylesheet" href="styles/service-media.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Performore",
+      "legalName": "MSMC Limited Ltd",
+      "alternateName": "Performore",
+      "url": "https://performore.co",
+      "logo": "https://performore.co/image_assets/performore_brand_logo_white.webp",
+      "email": "hello@performore.co",
+      "sameAs": ["https://www.linkedin.com/company/107313126/"]
+    }
+    </script>
+</head>
+<body class="pg-media">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M5ZBQRC5"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- NAV -->
+    <nav>
+        <a href="index.html" class="logo" aria-label="Performore">
+            <img src="image_assets/performore_brand_logo_white.webp" alt="Performore" decoding="async" fetchpriority="high">
+        </a>
+        <ul class="nav-links" aria-label="Primary">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#clients">Clients</a></li>
+            <li><a href="index.html#results">Results</a></li>
+            <li class="nav-services">
+                <a href="index.html#services" class="nav-services-trigger">
+                    Services
+                    <svg class="nav-services-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="m6 9 6 6 6-6"/>
+                    </svg>
+                </a>
+                <div class="nav-services-panel" role="menu" aria-label="Services">
+                    <a href="growth-strategy.html" class="nav-services-item" role="menuitem">
+                        <span class="nav-services-badge" style="--svc-accent:#4f7af4"></span>
+                        <span class="nav-services-body">
+                            <span class="nav-services-title">Growth Strategy</span>
+                            <span class="nav-services-desc">Funnel, unit economics and a 90-day plan.</span>
+                        </span>
+                    </a>
+                    <a href="algorithm-training.html" class="nav-services-item" role="menuitem">
+                        <span class="nav-services-badge" style="--svc-accent:#1de8b5"></span>
+                        <span class="nav-services-body">
+                            <span class="nav-services-title">Algorithm Training</span>
+                            <span class="nav-services-desc">Tracking and signals the algorithm learns from.</span>
+                        </span>
+                    </a>
+                    <a href="creative-strategy.html" class="nav-services-item" role="menuitem">
+                        <span class="nav-services-badge" style="--svc-accent:#c040e6"></span>
+                        <span class="nav-services-body">
+                            <span class="nav-services-title">Creative Strategy</span>
+                            <span class="nav-services-desc">Angle-first creative, tested weekly.</span>
+                        </span>
+                    </a>
+                    <span class="nav-services-item is-current" role="menuitem" aria-current="page">
+                        <span class="nav-services-badge" style="--svc-accent:#818cf8"></span>
+                        <span class="nav-services-body">
+                            <span class="nav-services-title">Media Buying <span class="nav-services-tag">Current</span></span>
+                            <span class="nav-services-desc">Budget run like a portfolio, not a pile of campaigns.</span>
+                        </span>
+                    </span>
+                </div>
+            </li>
+            <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="javascript:void(0)" class="cta" data-cal-link="morsofer/25-mins-with-performore" data-cal-namespace="25-mins-with-performore" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+                <div class="cta-circle">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                         stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </div>
+                Start growth sprint
+            </a>
+        </div>
+    </nav>
+
+    <!-- SERVICE HERO -->
+    <section class="sp-hero" id="top" aria-labelledby="spHeroTitle">
+        <div class="sp-hero-ambient" aria-hidden="true">
+            <span class="sp-ambient-label" style="top:12%;left:2.5%">ROAS</span>
+            <span class="sp-ambient-label" style="top:56%;left:1.5%">Pacing</span>
+            <span class="sp-ambient-label" style="bottom:12%;left:3%">Incrementality</span>
+            <span class="sp-ambient-label" style="top:10%;right:2.5%">MER</span>
+            <span class="sp-ambient-label" style="top:42%;right:1.5%">CPM</span>
+            <span class="sp-ambient-label" style="bottom:10%;right:3%">Frequency</span>
+        </div>
+
+        <div class="sp-hero-inner">
+            <div class="sp-hero-copy">
+                <div class="sp-crumbs">
+                    <a href="index.html#services" class="sp-crumb-link">Services</a>
+                    <span class="sp-crumb-sep" aria-hidden="true">/</span>
+                    <span class="sp-crumb-chip">04 &middot; Media Buying</span>
+                </div>
+                <h1 class="sp-title" id="spHeroTitle">
+                    <span class="sp-line">Every pound of</span>
+                    <span class="sp-line"><span class="sp-grad">spend</span> has</span>
+                    <span class="sp-line">a job.</span>
+                </h1>
+                <p class="sp-lede">
+                    We run paid media like a portfolio &mdash; budgets allocated by evidence,
+                    protected by kill rules, scaled only when the numbers say so. Across Meta,
+                    Google, TikTok, LinkedIn and Microsoft.
+                </p>
+                <div class="sp-actions">
+                    <a href="javascript:void(0)" class="sp-btn-primary" data-cal-link="morsofer/25-mins-with-performore" data-cal-namespace="25-mins-with-performore" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+                        <span>Get the teardown</span>
+                        <span class="sp-btn-icon" aria-hidden="true">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </span>
+                    </a>
+                    <a href="#allocation" class="sp-btn-ghost">See how we allocate</a>
+                </div>
+            </div>
+
+            <div class="sp-hero-visual" aria-hidden="true">
+                <div class="sp-card sp-card-funnel">
+                    <div class="sp-card-label">
+                        <span class="sp-card-dot" style="background:#4f7af4"></span>
+                        Allocation
+                    </div>
+                    <div class="mb-alloc-rows">
+                        <div class="mb-alloc-row">
+                            <span class="mb-alloc-name">Meta</span>
+                            <div class="mb-alloc-track"><span class="mb-alloc-fill" style="width:84%"></span></div>
+                            <span class="mb-alloc-val">42%</span>
+                        </div>
+                        <div class="mb-alloc-row">
+                            <span class="mb-alloc-name">Google</span>
+                            <div class="mb-alloc-track"><span class="mb-alloc-fill" style="width:62%"></span></div>
+                            <span class="mb-alloc-val">31%</span>
+                        </div>
+                        <div class="mb-alloc-row">
+                            <span class="mb-alloc-name">TikTok</span>
+                            <div class="mb-alloc-track"><span class="mb-alloc-fill" style="width:30%"></span></div>
+                            <span class="mb-alloc-val">15%</span>
+                        </div>
+                        <div class="mb-alloc-row">
+                            <span class="mb-alloc-name">LinkedIn</span>
+                            <div class="mb-alloc-track"><span class="mb-alloc-fill" style="width:24%"></span></div>
+                            <span class="mb-alloc-val">12%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sp-card sp-card-econ">
+                    <div class="sp-card-label">
+                        <span class="sp-card-dot" style="background:#4f7af4"></span>
+                        Performance
+                    </div>
+                    <div class="sp-metric-row">
+                        <div class="sp-metric">
+                            <span class="sp-metric-key">ROAS</span>
+                            <span class="sp-metric-val">4.8&times;</span>
+                        </div>
+                        <div class="sp-metric">
+                            <span class="sp-metric-key">Spend</span>
+                            <span class="sp-metric-val sp-metric-val-sm">$84k</span>
+                        </div>
+                        <div class="sp-metric">
+                            <span class="sp-metric-key">Pipeline</span>
+                            <span class="sp-metric-val sp-metric-val-sm" style="color:#1de8b5">+$404k</span>
+                        </div>
+                    </div>
+                    <svg class="sp-mini-chart" viewBox="0 0 184 40" fill="none">
+                        <rect x="2"   y="22" width="20" height="18" rx="2" fill="rgba(79,122,244,.22)" stroke="rgba(79,122,244,.35)" stroke-width=".6"/>
+                        <rect x="28"  y="14" width="20" height="26" rx="2" fill="rgba(79,122,244,.32)" stroke="rgba(79,122,244,.45)" stroke-width=".6"/>
+                        <rect x="54"  y="16" width="20" height="24" rx="2" fill="rgba(79,122,244,.32)" stroke="rgba(79,122,244,.45)" stroke-width=".6"/>
+                        <rect x="80"  y="6"  width="20" height="34" rx="2" fill="rgba(79,122,244,.52)" stroke="rgba(79,122,244,.65)" stroke-width=".6"/>
+                        <rect x="106" y="2"  width="20" height="38" rx="2" fill="rgba(79,122,244,.65)" stroke="rgba(79,122,244,.78)" stroke-width=".6"/>
+                        <rect x="132" y="0"  width="20" height="40" rx="2" fill="rgba(79,122,244,.82)" stroke="rgba(79,122,244,.95)" stroke-width=".6"/>
+                    </svg>
+                </div>
+
+                <div class="sp-card sp-card-plan">
+                    <div class="sp-card-label">
+                        <span class="sp-card-dot" style="background:#1de8b5"></span>
+                        Monthly pacing
+                    </div>
+                    <div class="mb-pace">
+                        <div class="mb-pace-head">
+                            <span class="mb-pace-val">$57.4k / $84k</span>
+                            <span class="mb-pace-chip">On target</span>
+                        </div>
+                        <div class="mb-pace-track"><span class="mb-pace-fill" style="width:68%"></span></div>
+                        <div class="mb-pace-foot">
+                            <span>Day 21 of 31</span>
+                            <span>68%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sp-hero-scrollhint" aria-hidden="true">
+            <span class="sp-scrollhint-line"></span>
+            <span class="sp-scrollhint-text">Scroll</span>
+        </div>
+    </section>
+
+    <!-- STATEMENT -->
+    <section class="sp-statement" aria-label="Point of view">
+        <div class="sp-statement-glow" aria-hidden="true"></div>
+        <p class="sp-statement-body">
+            Scale is not a budget decision. It's an evidence decision.
+        </p>
+    </section>
+
+    <!-- ALLOCATION -->
+    <section class="mb-alloc-section" id="allocation" aria-labelledby="mbAllocTitle">
+        <div class="mb-alloc-inner">
+            <div class="mb-alloc-head" data-reveal>
+                <h2 class="sp-h2" id="mbAllocTitle">A portfolio, not a pile of campaigns.</h2>
+                <p class="sp-head-copy">Budgets follow a 70 / 20 / 10 structure: most of the money compounds in what's proven, a fifth pushes what's promising, and a tenth buys new information.</p>
+            </div>
+
+            <div class="mb-bar" data-bar-group data-reveal data-reveal-delay="0.15" role="img" aria-label="Budget split: 70 percent proven, 20 percent promising, 10 percent experiments">
+                <div class="mb-bar-seg mb-seg-proven" style="width:70%">
+                    <span class="mb-seg-fill" data-bar-fill></span>
+                    <span class="mb-seg-pct">70%</span>
+                    <span class="mb-seg-lbl">Proven</span>
+                </div>
+                <div class="mb-bar-seg mb-seg-promising" style="width:20%">
+                    <span class="mb-seg-fill" data-bar-fill data-bar-delay="0.3"></span>
+                    <span class="mb-seg-pct">20%</span>
+                    <span class="mb-seg-lbl">Promising</span>
+                </div>
+                <div class="mb-bar-seg mb-seg-experiment" style="width:10%">
+                    <span class="mb-seg-fill" data-bar-fill data-bar-delay="0.55"></span>
+                    <span class="mb-seg-pct">10%</span>
+                    <span class="mb-seg-lbl">Experiments</span>
+                </div>
+            </div>
+
+            <div class="mb-platforms">
+                <div class="mb-platform" data-reveal>
+                    <span class="mb-platform-name">Meta</span>
+                    <p class="mb-platform-role">Demand creation and capture at scale &mdash; the workhorse for most consumer accounts.</p>
+                    <span class="mb-platform-chip is-proven">Proven</span>
+                </div>
+                <div class="mb-platform" data-reveal data-reveal-delay="0.07">
+                    <span class="mb-platform-name">Google</span>
+                    <p class="mb-platform-role">Harvesting intent you've earned elsewhere &mdash; search, PMax and YouTube with clean feeds.</p>
+                    <span class="mb-platform-chip is-proven">Proven</span>
+                </div>
+                <div class="mb-platform" data-reveal data-reveal-delay="0.14">
+                    <span class="mb-platform-name">TikTok</span>
+                    <p class="mb-platform-role">The creative testing ground &mdash; cheap reach, fast signals, hooks proven here travel everywhere.</p>
+                    <span class="mb-platform-chip is-promising">Promising</span>
+                </div>
+                <div class="mb-platform" data-reveal data-reveal-delay="0.21">
+                    <span class="mb-platform-name">LinkedIn</span>
+                    <p class="mb-platform-role">B2B pipeline where the deal size justifies the CPMs &mdash; tight ICP targeting, lead-gen discipline.</p>
+                    <span class="mb-platform-chip is-promising">Promising</span>
+                </div>
+                <div class="mb-platform" data-reveal data-reveal-delay="0.28">
+                    <span class="mb-platform-name">Microsoft</span>
+                    <p class="mb-platform-role">Intent overflow at a discount &mdash; imported search structure, watched for the cost advantage.</p>
+                    <span class="mb-platform-chip is-experiment">Experiment</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RULEBOOK -->
+    <section class="mb-rules-section" id="rulebook" aria-labelledby="mbRulesTitle">
+        <div class="mb-rules-inner">
+            <div class="mb-rules-head" data-reveal>
+                <h2 class="sp-h2" id="mbRulesTitle">Rules written before the money moves.</h2>
+                <p class="sp-head-copy">Discipline is the edge. Every account runs on rules agreed upfront, so decisions get made by evidence &mdash; not by whoever feels nervous that week.</p>
+            </div>
+
+            <div class="mb-rules">
+                <article class="mb-rule" data-reveal>
+                    <span class="mb-rule-idx">R-01</span>
+                    <h3 class="mb-rule-title">The kill rule</h3>
+                    <p class="mb-rule-copy">An ad set that spends 3&times; target CAC without converting is switched off. No debate, no "one more day". The rule fires so feelings don't have to.</p>
+                </article>
+                <article class="mb-rule" data-reveal data-reveal-delay="0.08">
+                    <span class="mb-rule-idx">R-02</span>
+                    <h3 class="mb-rule-title">The scale rule</h3>
+                    <p class="mb-rule-copy">Winners scale by at most 20% per step, so budget growth never resets learning. Faster feels good; slower compounds.</p>
+                </article>
+                <article class="mb-rule" data-reveal data-reveal-delay="0.16">
+                    <span class="mb-rule-idx">R-03</span>
+                    <h3 class="mb-rule-title">Learning-phase protection</h3>
+                    <p class="mb-rule-copy">No edits while a campaign is learning. Every "small tweak" restarts the clock &mdash; and the platform charges you for it in CPMs.</p>
+                </article>
+                <article class="mb-rule" data-reveal data-reveal-delay="0.24">
+                    <span class="mb-rule-idx">R-04</span>
+                    <h3 class="mb-rule-title">Creative refresh threshold</h3>
+                    <p class="mb-rule-copy">When frequency climbs and CTR sags past the agreed line, new variants enter from the creative backlog &mdash; before fatigue taxes the whole account.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROOF -->
+    <section class="sp-metrics mb-proof-section" id="proof" aria-labelledby="mbProofTitle">
+        <div class="sp-metrics-inner">
+            <div class="sp-metrics-head" data-reveal>
+                <h2 class="sp-h2" id="mbProofTitle">Numbers from the buying desk.</h2>
+            </div>
+
+            <div class="sp-tiles">
+                <div class="sp-tile">
+                    <p class="sp-tile-q">Budgets managed from startup tests to enterprise scale.</p>
+                    <span class="sp-tile-val" data-count-to="20" data-prefix="&pound;" data-suffix="M+">&pound;20M+</span>
+                    <span class="sp-tile-lbl">Media managed</span>
+                </div>
+                <div class="sp-tile">
+                    <p class="sp-tile-q">Blended return across active accounts.</p>
+                    <span class="sp-tile-val" data-count-to="4.8" data-decimals="1" data-suffix="&times;">4.8&times;</span>
+                    <span class="sp-tile-lbl">Blended ROAS</span>
+                </div>
+                <div class="sp-tile">
+                    <p class="sp-tile-q">Pipeline created against $84k monthly spend.</p>
+                    <span class="sp-tile-val" data-count-to="404" data-prefix="+$" data-suffix="k">+$404k</span>
+                    <span class="sp-tile-lbl">Pipeline added</span>
+                </div>
+                <div class="sp-tile">
+                    <p class="sp-tile-q">Clients stay because the numbers keep earning it.</p>
+                    <span class="sp-tile-val" data-count-to="3" data-suffix="yrs">3yrs</span>
+                    <span class="sp-tile-lbl">Avg. client retention</span>
+                </div>
+            </div>
+            <p class="sp-tiles-note" data-reveal data-reveal-delay="0.3">Illustrative account figures alongside real track-record numbers &mdash; targets are set per account.</p>
+        </div>
+    </section>
+
+    <!-- BOOK A CALL CTA -->
+    <section class="book-call-section" id="book-call">
+        <div class="book-call-inner">
+            <div class="book-call-copy">
+                <span class="book-call-kicker">Ready when you are</span>
+                <h2 class="book-call-title">Get the teardown first.</h2>
+                <p class="book-call-text">One call, screen-share into your accounts. We'll show you what we'd kill, what we'd scale and what it's costing you to wait.</p>
+                <a class="book-call-button" href="javascript:void(0)" aria-label="Book a media buying call with Performore" data-cal-link="morsofer/25-mins-with-performore" data-cal-namespace="25-mins-with-performore" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+                    <span>Book a call</span>
+                    <span class="book-call-button-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+
+            <div class="book-call-visual" aria-label="Founder-led growth call">
+                <span class="book-call-ring book-call-ring-one" aria-hidden="true"></span>
+                <span class="book-call-ring book-call-ring-two" aria-hidden="true"></span>
+                <span class="book-call-arc" aria-hidden="true"></span>
+
+                <div class="book-call-photo">
+                    <img src="image_assets/hero_photos/Mor_webp.webp" alt="Mor from Performore" loading="lazy" decoding="async">
+                </div>
+
+                <a class="book-call-orbit" href="javascript:void(0)" aria-label="Book a media buying call" data-cal-link="morsofer/25-mins-with-performore" data-cal-namespace="25-mins-with-performore" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+
+                <div class="book-call-tags" aria-label="Media buying platforms">
+                    <span>Meta</span>
+                    <span>Google</span>
+                    <span>TikTok</span>
+                    <span>LinkedIn</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <a href="index.html" class="footer-logo" aria-label="Performore">
+                <img src="image_assets/performore_brand_logo_white.webp" alt="Performore" loading="lazy" decoding="async">
+            </a>
+            <nav class="footer-links" aria-label="Footer">
+                <a href="index.html">Home</a>
+                <a href="index.html#clients">Clients</a>
+                <a href="index.html#results">Results</a>
+                <a href="index.html#faq">FAQ</a>
+            </nav>
+            <a href="javascript:void(0)" class="footer-cta" data-cal-link="morsofer/25-mins-with-performore" data-cal-namespace="25-mins-with-performore" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>Start growth sprint</a>
+        </div>
+        <div class="site-footer-services">
+            <span class="footer-services-lbl">What we do</span>
+            <nav class="footer-services-links" aria-label="Services">
+                <a href="growth-strategy.html">Growth Strategy</a>
+                <a href="algorithm-training.html">Algorithm Training</a>
+                <a href="creative-strategy.html">Creative Strategy</a>
+                <a href="media-buying.html">Media Buying</a>
+            </nav>
+        </div>
+        <div class="site-footer-meta">
+            <div class="footer-meta-contact">
+                <a href="mailto:hello@performore.co">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                    hello@performore.co
+                </a>
+                <a href="https://www.linkedin.com/company/107313126/" target="_blank" rel="noopener noreferrer" aria-label="Performore on LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    LinkedIn
+                </a>
+            </div>
+            <nav class="footer-legal-nav" aria-label="Legal">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="cookie-policy.html">Cookie Policy</a>
+            </nav>
+        </div>
+        <div class="site-footer-bottom">
+            <p class="footer-legal-text">&copy; 2026 Performore. MSMC Limited Ltd (trading as Performore) is a company registered in England, company number 16695823.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="scripts/service-page.js"></script>
+    <script type="text/javascript">
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+      Cal("init", "25-mins-with-performore", {origin:"https://app.cal.com"});
+      Cal.config = Cal.config || {};
+      Cal.config.forwardQueryParams = true;
+      Cal.ns["25-mins-with-performore"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#7C2BBF"},"dark":{"cal-brand":"#7C2BBF"}},"hideEventTypeDetails":false,"layout":"month_view"});
+    </script>
+
+    <!-- Cookie consent (Google Consent Mode v2) -->
+    <script src="scripts/mobile-nav.js" defer></script>
+    <script src="scripts/consent.js" defer></script>
+
+</body>
+</html>

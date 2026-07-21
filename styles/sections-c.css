@@ -1,0 +1,469 @@
+/* ─── SERVICES SECTION ─── */
+.services-section {
+    position: relative;
+    background:
+        radial-gradient(ellipse 58% 42% at 18% 24%, rgba(79, 122, 244, 0.16), transparent 68%),
+        radial-gradient(ellipse 48% 36% at 78% 70%, rgba(29, 232, 181, 0.08), transparent 64%),
+        radial-gradient(ellipse 50% 38% at 72% 18%, rgba(192, 64, 230, 0.12), transparent 66%),
+        linear-gradient(180deg, #050507 0%, #080911 46%, #050507 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: clamp(80px, 10vh, 120px) clamp(40px, 7.45vw, 114px);
+    overflow-x: clip;
+    isolation: isolate;
+}
+
+.services-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.028) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(circle at 50% 48%, black 0%, transparent 74%);
+    -webkit-mask-image: radial-gradient(circle at 50% 48%, black 0%, transparent 74%);
+    opacity: 0.5;
+}
+
+.services-section::after {
+    content: '';
+    position: absolute;
+    inset: auto -12% -28% 42%;
+    height: 48%;
+    z-index: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse at center, rgba(79, 122, 244, 0.16), transparent 68%);
+    filter: blur(42px);
+}
+
+.services-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    gap: clamp(40px, 5vw, 80px);
+    align-items: center;
+    width: 100%;
+}
+
+/* ── Left: media card ── */
+.svc-media-col {
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.svc-card-wrap {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.svc-media-card {
+    position: relative;
+    width: clamp(200px, 22vw, 340px);
+    aspect-ratio: 3 / 4;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(7, 7, 10, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        0 24px 80px rgba(2, 4, 14, 0.52);
+}
+
+.svc-card-imgs {
+    position: absolute;
+    inset: 0;
+}
+
+.svc-card-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.7s var(--ease-luxe);
+}
+
+.svc-card-img.is-active { opacity: 1; }
+
+/* ── Floating badges ── */
+.svc-badge {
+    position: absolute;
+    z-index: 10;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.026)),
+        rgba(9, 10, 18, 0.9);
+    border: 1px solid rgba(79, 122, 244, 0.24);
+    border-radius: 12px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.075),
+        0 18px 52px rgba(2, 4, 14, 0.48);
+}
+
+.svc-badge-tr {
+    top: 18%;
+    right: 0;
+    transform: translateX(38%);
+}
+
+.svc-badge-bl {
+    bottom: 14%;
+    left: 0;
+    transform: translateX(-38%);
+}
+
+.svc-badge-icon-wrap {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.svc-badge-icon-wrap.is-blue {
+    background: rgba(79, 122, 244, 0.18);
+    color: var(--blue);
+}
+
+.svc-badge-icon-wrap.is-purple {
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+}
+
+.svc-badge-icon-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0) contrast(1.12) brightness(1.25);
+    opacity: 0.92;
+}
+
+.svc-badge-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.svc-badge-num {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    color: var(--white);
+    line-height: 1.1;
+    transition: opacity 0.35s ease;
+}
+
+.svc-badge-lbl {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 7px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    margin-top: 2px;
+    line-height: 1.5;
+    transition: opacity 0.35s ease;
+}
+
+/* ── Right: service name list ── */
+.svc-names-col {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.services-lbl {
+    display: block;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    color: rgba(192, 63, 230, 0.56);
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+.svc-names {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 36px;
+}
+
+.svc-name-item {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 5px 0;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.22);
+    transition: color 0.26s ease;
+    border: none;
+    background: none;
+    text-align: left;
+    width: 100%;
+}
+
+.svc-name-item.is-active,
+.svc-name-item:hover {
+    color: var(--white);
+}
+
+.svc-name-icon {
+    width: clamp(26px, 2.2vw, 38px);
+    height: clamp(26px, 2.2vw, 38px);
+    border-radius: 8px;
+    background: rgba(79, 122, 244, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+    opacity: 0.34;
+    overflow: hidden;
+    transform: scale(0.88);
+    transition: opacity 0.26s ease, transform 0.26s ease, border-color 0.26s ease;
+}
+
+.svc-name-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0) contrast(1.08) brightness(1.18);
+}
+
+.svc-name-item.is-active .svc-name-icon,
+.svc-name-item:hover .svc-name-icon {
+    opacity: 1;
+    transform: scale(1);
+    border-color: rgba(192, 63, 230, 0.5);
+}
+
+a.svc-name-item {
+    text-decoration: none;
+}
+
+/* Arrow shown on services that link to their own page */
+.svc-name-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(22px, 1.8vw, 30px);
+    height: clamp(22px, 1.8vw, 30px);
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: rgba(255, 255, 255, 0.6);
+    opacity: 0;
+    transform: translateX(-6px) scale(0.85);
+    transition: opacity 0.3s var(--ease-luxe), transform 0.3s var(--ease-luxe), border-color 0.3s var(--ease-luxe), color 0.3s var(--ease-luxe);
+}
+
+.svc-name-arrow svg {
+    width: 55%;
+    height: 55%;
+}
+
+.svc-name-item.is-active .svc-name-arrow,
+.svc-name-item:hover .svc-name-arrow {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    border-color: rgba(29, 232, 181, 0.5);
+    color: var(--teal);
+}
+
+.svc-name-text {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(22px, 3vw, 52px);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+/* All Services button */
+.svc-all-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 30px;
+    border: 1.5px solid rgba(79, 122, 244, 0.48);
+    border-radius: 8px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.82);
+    text-decoration: none;
+    transition: background 0.3s var(--ease-luxe), color 0.3s var(--ease-luxe), border-color 0.3s var(--ease-luxe), transform 0.3s var(--ease-luxe), box-shadow 0.3s var(--ease-luxe);
+}
+
+.svc-all-btn:hover {
+    background: rgba(79, 122, 244, 0.2);
+    color: #fff;
+    border-color: rgba(29, 232, 181, 0.54);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(79, 122, 244, 0.2);
+}
+
+@media (max-width: 960px) {
+    .services-inner {
+        grid-template-columns: 1fr;
+        gap: 56px;
+    }
+    .svc-media-col {
+        order: 2;
+        justify-content: center;
+    }
+    .svc-names-col {
+        order: 1;
+    }
+    .svc-media-card { width: min(260px, 68vw); }
+    .svc-badge-tr { transform: translateX(24%); }
+    .svc-badge-bl { transform: translateX(-24%); }
+}
+
+@media (max-width: 560px) {
+    .svc-name-text { font-size: clamp(20px, 6.5vw, 36px); }
+    .svc-badge-tr { transform: translateX(14%); }
+    .svc-badge-bl { transform: translateX(-14%); }
+}
+
+/* ─── FLOW DIVIDER — chapter break between logo cloud and statement ─── */
+.flow-divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: min(460px, 68vw);
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.flow-divider-line {
+    flex: 1;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.12);
+    mask-image: linear-gradient(to right, transparent, white 30%, white 70%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, white 30%, white 70%, transparent);
+}
+
+.flow-divider-mark {
+    width: 5px;
+    height: 5px;
+    border: 1px solid rgba(180, 130, 255, 0.35);
+    transform: rotate(45deg);
+    flex-shrink: 0;
+}
+
+/* ─── STATEMENT SECTION ─── */
+.statement-section {
+    position: relative;
+    background:
+        radial-gradient(ellipse 72% 56% at 50% 50%, rgba(79, 122, 244, 0.065), transparent 70%),
+        var(--bg);
+    padding: clamp(100px, 14vh, 160px) clamp(32px, 8vw, 160px) clamp(120px, 16vh, 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    min-height: 72vh;
+}
+
+/* ambient radial glow — revealed by JS */
+.statement-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 88% 68% at 50% 50%,
+        rgba(29, 232, 181, 0.072) 0%,
+        rgba(79, 122, 244, 0.05) 52%,
+        transparent 78%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.statement-inner {
+    max-width: 1040px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.statement-body {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(38px, 5.4vw, 92px);
+    font-weight: 800;
+    line-height: 1.13;
+    letter-spacing: -0.048em;
+    color: var(--white);
+}
+
+/* individual word spans — set to dim by JS before animation */
+.stmt-word {
+    display: inline-block;
+    will-change: opacity, transform, filter;
+}
+
+@media (max-width: 740px) {
+    .statement-section { padding: 80px 24px; }
+    .statement-body { font-size: clamp(28px, 7.5vw, 44px); }
+}
+
+/* ─── HERO RESPONSIVE ─── */
+@media (max-width: 960px) {
+    .growth-card { display: none; }
+    .hero {
+        min-height: 80vh;
+        padding: 110px 28px 56px;
+    }
+
+    .hero-headline {
+        max-width: 740px;
+        font-size: clamp(42px, 9.4vw, 78px);
+    }
+}
+
+@media (max-width: 600px) {
+    .hero { padding: 100px 20px 48px; }
+    .hero-headline {
+        max-width: 360px;
+        font-size: clamp(36px, 10vw, 54px);
+        line-height: 1.04;
+        letter-spacing: -0.035em;
+    }
+    .hero-actions { flex-direction: column; align-items: stretch; width: 100%; max-width: 320px; }
+    .btn-primary, .btn-secondary { justify-content: center; }
+    .btn-primary { padding-left: 18px; }
+    .growth-trajectory {
+        margin-top: -42px;
+        padding-bottom: 26px;
+    }
+    .growth-trajectory-shell { padding: 16px; border-radius: 28px; }
+    .growth-trajectory-head { align-items: flex-start; flex-direction: column; gap: 8px; }
+    .growth-chart { height: 230px; }
+    .growth-axis {
+        inset-inline: 20px;
+        letter-spacing: 0.1em;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gradient-text { animation: none; }
+}
