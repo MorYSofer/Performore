@@ -1,0 +1,27 @@
+# Performore
+
+> Performore is a founder-led fractional growth team for startups and scale-ups. It connects senior growth strategy with hands-on paid media, creative strategy, analytics, measurement and experimentation.
+
+## Founder
+
+- Mor Sofer is the founder of Performore and a growth marketer based in London, United Kingdom.
+- Profile: https://uk.linkedin.com/in/morsofer
+
+## Core services
+
+- [Growth Strategy](https://performore.co/growth-strategy): Full-funnel audits, unit economics, channel architecture and 90-day growth plans.
+- [Algorithm Training](https://performore.co/algorithm-training): Server-side tracking, event quality and value signals for advertising platforms.
+- [Creative Strategy](https://performore.co/creative-strategy): Angle-first creative systems, hooks, formats and iterative testing.
+- [Media Buying](https://performore.co/media-buying): Evidence-led paid media management across Meta, Google, TikTok, LinkedIn and Microsoft.
+
+## Company details
+
+- Website: https://performore.co/
+- Email: hello@performore.co
+- LinkedIn: https://www.linkedin.com/company/107313126/
+- Legal entity: MSMC Limited Ltd, trading as Performore; registered in England, company number 16695823.
+
+## Policies
+
+- [Privacy Policy](https://performore.co/privacy-policy)
+- [Cookie Policy](https://performore.co/cookie-policy)

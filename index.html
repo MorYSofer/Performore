@@ -44,9 +44,28 @@
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Performore</title>
+    <title>Performore | Fractional Growth Team for Scale-ups</title>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <meta name="description" content="Performore is Mor Sofer's fractional growth team for startups and scale-ups, combining growth strategy, paid media, creative, analytics and experimentation.">
     <link rel="canonical" href="https://performore.co/">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Performore">
+    <meta property="og:title" content="Performore — Senior growth thinking, plugged into execution">
+    <meta property="og:description" content="Mor Sofer's fractional growth team for startups and scale-ups, connecting strategy, paid media, creative and analytics to build sustainable growth.">
+    <meta property="og:url" content="https://performore.co/">
+    <meta property="og:image" content="https://performore.co/image_assets/mor-photos/mor-60.jpg">
+    <meta property="og:image:secure_url" content="https://performore.co/image_assets/mor-photos/mor-60.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="6240">
+    <meta property="og:image:height" content="4160">
+    <meta property="og:image:alt" content="Mor Sofer, founder of Performore">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Performore — Senior growth thinking, plugged into execution">
+    <meta name="twitter:description" content="Mor Sofer's fractional growth team for startups and scale-ups, connecting strategy, paid media, creative and analytics.">
+    <meta name="twitter:image" content="https://performore.co/image_assets/mor-photos/mor-60.jpg">
+    <meta name="twitter:image:alt" content="Mor Sofer, founder of Performore">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Dancing+Script:wght@700&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -61,14 +80,59 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Performore",
-      "legalName": "MSMC Limited Ltd",
-      "alternateName": "Performore",
-      "url": "https://performore.co",
-      "logo": "https://performore.co/image_assets/performore_brand_logo_white.webp",
-      "email": "hello@performore.co",
-      "sameAs": ["https://www.linkedin.com/company/107313126/"]
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://performore.co/#organization",
+          "name": "Performore",
+          "legalName": "MSMC Limited Ltd",
+          "url": "https://performore.co/",
+          "description": "A founder-led fractional growth team for startups and scale-ups, connecting growth strategy, paid media, creative strategy, analytics and experimentation.",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://performore.co/image_assets/performore_brand_logo_white.webp",
+            "width": 966,
+            "height": 304
+          },
+          "image": "https://performore.co/image_assets/mor-photos/mor-60.jpg",
+          "email": "hello@performore.co",
+          "founder": { "@id": "https://performore.co/#mor-sofer" },
+          "sameAs": ["https://www.linkedin.com/company/107313126/"]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://performore.co/#mor-sofer",
+          "name": "Mor Sofer",
+          "url": "https://performore.co/#mor-sofer",
+          "image": "https://performore.co/image_assets/mor-photos/mor-60.jpg",
+          "jobTitle": "Founder",
+          "worksFor": { "@id": "https://performore.co/#organization" },
+          "knowsAbout": ["Growth marketing", "Paid media", "Growth strategy", "Creative strategy", "Marketing analytics"],
+          "sameAs": ["https://uk.linkedin.com/in/morsofer"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://performore.co/#website",
+          "url": "https://performore.co/",
+          "name": "Performore",
+          "description": "Senior growth thinking, plugged directly into execution.",
+          "publisher": { "@id": "https://performore.co/#organization" },
+          "inLanguage": "en-GB"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://performore.co/#webpage",
+          "url": "https://performore.co/",
+          "name": "Performore | Fractional Growth Team for Scale-ups",
+          "description": "Performore is Mor Sofer's fractional growth team for startups and scale-ups, combining growth strategy, paid media, creative, analytics and experimentation.",
+          "isPartOf": { "@id": "https://performore.co/#website" },
+          "about": [
+            { "@id": "https://performore.co/#organization" },
+            { "@id": "https://performore.co/#mor-sofer" }
+          ],
+          "inLanguage": "en-GB"
+        }
+      ]
     }
     </script>
 </head>
@@ -1492,7 +1556,7 @@
     <section class="book-call-section" id="book-call" data-screen-label="Book a call">
         <div class="book-call-inner">
             <div class="book-call-copy">
-                <span class="book-call-kicker">Ready when you are</span>
+                <span class="book-call-kicker" id="mor-sofer">Mor Sofer · Founder, Performore</span>
                 <h2 class="book-call-title">From Seed to Series-C. We were in the room.</h2>
                 <p class="book-call-text">Bring the messy bits. We will help you sort the signal from the noise and map the next few smart steps to build a pipeline and optimise your growth marketing.</p>
                 <a class="book-call-button" href="javascript:void(0)" aria-label="Book a growth call with Performore" data-cal-link="morsofer/25-mins-with-performore" data-cal-namespace="25-mins-with-performore" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
@@ -1511,7 +1575,7 @@
                 <span class="book-call-arc" aria-hidden="true"></span>
 
                 <div class="book-call-photo">
-                    <img src="image_assets/hero_photos/Mor_webp.webp" alt="Mor from Performore" loading="lazy" decoding="async">
+                    <img src="image_assets/hero_photos/Mor_webp.webp" alt="Mor Sofer, founder of Performore" loading="lazy" decoding="async">
                 </div>
 
                 <a class="book-call-orbit" href="javascript:void(0)" aria-label="Book a growth call" data-cal-link="morsofer/25-mins-with-performore" data-cal-namespace="25-mins-with-performore" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
