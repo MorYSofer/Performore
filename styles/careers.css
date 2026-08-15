@@ -1,33 +1,48 @@
 /* ─── CAREERS PAGE ───
    Layers on top of service-page.css (sp-hero, sp-title, sp-h2, sp-btn-*).
    Every class here is crs-prefixed so it can't collide with the service
-   pages or the homepage stylesheets. */
+   pages or the homepage stylesheets.
+
+   NOTE: this file loads AFTER service-page.css, so anything declared here
+   wins on equal specificity. Keep overrides narrow and never restate a
+   property .sp-* already owns unless the override is the whole point. */
 
 /* ═══ Hero ══════════════════════════════════════════════════════════ */
-/* No hero visual on this page, so the copy column runs full width and
-   the hero can sit shorter than a service page. */
-.crs-hero {
-    min-height: 76vh;
-    min-height: 76dvh;
-}
-
+/* There's no hero visual on this page, so the copy column runs the full
+   width of .sp-hero-inner instead of sharing the grid with a card stack. */
 .crs-hero-inner {
     grid-template-columns: minmax(0, 1fr);
 }
 
-.crs-hero .sp-hero-copy {
-    max-width: 21ch;
-}
-
+/* No max-width on the headline: it breaks at the explicit .sp-line spans,
+   so a width cap can only ever force a second, unbalanced wrap. Never cap
+   .sp-hero-copy either — it also wraps the lede and the buttons and would
+   drag the whole column into a narrow ribbon. */
 .crs-hero .sp-lede {
-    max-width: 56ch;
+    max-width: 58ch;
 }
 
-/* A button, not a link — reset the UA chrome so it matches .sp-btn-primary
-   exactly (which is authored for an <a>). */
+/* Desktop only: service-page.css sets min-height:auto at <=1023px and the
+   hero must be free to shrink to its content there. */
+@media (min-width: 1024px) {
+    .crs-hero {
+        min-height: 74vh;
+        min-height: 74dvh;
+    }
+}
+
+/* On a service page the ambient labels sit safely outside a half-width copy
+   column. Here the copy spans the full grid, so they clip the headline until
+   the page gutters are wide enough to clear them. */
+@media (max-width: 1499px) {
+    .crs-hero .sp-hero-ambient { display: none; }
+}
+
+/* <button> doesn't inherit type styling, but .sp-btn-primary sets
+   font-family/size/weight itself, so it already covers this element. Only
+   neutralise the UA chrome that .sp-btn-primary does NOT set — touching
+   border, background or font here would override the real button styling. */
 .crs-apply-btn {
-    border: none;
-    font: inherit;
     cursor: pointer;
     -webkit-appearance: none;
     appearance: none;
@@ -54,7 +69,7 @@
 }
 
 .crs-head {
-    margin-bottom: clamp(38px, 5vh, 64px);
+    margin-bottom: clamp(34px, 4.5vh, 58px);
 }
 
 .crs-head-copy {
@@ -69,43 +84,50 @@
 }
 
 /* ═══ What we look for ══════════════════════════════════════════════ */
+/* Real borders on the cells rather than a 1px grid gap showing a lighter
+   parent through — translucent tiles washed that trick out completely. */
 .crs-traits {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1px;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     overflow: hidden;
 }
 
 .crs-trait {
-    padding: clamp(28px, 3.4vw, 44px);
-    background: rgba(255, 255, 255, 0.014);
+    padding: clamp(26px, 3.2vw, 42px);
+    background: rgba(255, 255, 255, 0.018);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
     transition: background 0.4s var(--ease-luxe);
 }
 
-.crs-trait:hover {
-    background: rgba(255, 255, 255, 0.032);
+/* Top row and first column shouldn't double up on the container border. */
+.crs-trait:nth-child(-n+2) { border-top: none; }
+.crs-trait:nth-child(odd)  { border-left: none; }
+
+@media (hover: hover) and (pointer: fine) {
+    .crs-trait:hover { background: rgba(255, 255, 255, 0.038); }
 }
 
 .crs-trait-num {
     display: block;
     font-family: 'Bricolage Grotesque', sans-serif;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
-    letter-spacing: 0.12em;
-    color: rgba(255, 255, 255, 0.26);
+    letter-spacing: 0.16em;
+    color: rgba(255, 255, 255, 0.28);
 }
 
 .crs-trait-title {
-    margin: 16px 0 0;
+    margin: 14px 0 0;
     font-family: 'Bricolage Grotesque', sans-serif;
-    font-size: clamp(20px, 1.9vw, 27px);
+    font-size: clamp(19px, 1.8vw, 26px);
     font-weight: 800;
     letter-spacing: -0.04em;
-    line-height: 1.12;
+    line-height: 1.14;
     color: rgba(255, 255, 255, 0.92);
+    text-wrap: balance;
 }
 
 .crs-trait-text {
@@ -116,7 +138,7 @@
     line-height: 1.65;
     letter-spacing: -0.02em;
     color: rgba(255, 255, 255, 0.5);
-    max-width: 44ch;
+    max-width: 46ch;
 }
 
 /* ═══ How it works ══════════════════════════════════════════════════ */
@@ -131,8 +153,8 @@
 
 .crs-step {
     display: grid;
-    grid-template-columns: 58px minmax(0, 1fr);
-    gap: 16px;
+    grid-template-columns: 56px minmax(0, 1fr);
+    gap: 18px;
     align-items: start;
     padding: clamp(24px, 3vh, 34px) 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -142,8 +164,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 34px;
-    height: 34px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     border: 1px solid rgba(255, 255, 255, 0.14);
     font-family: 'Bricolage Grotesque', sans-serif;
@@ -170,7 +192,7 @@
     line-height: 1.65;
     letter-spacing: -0.02em;
     color: rgba(255, 255, 255, 0.5);
-    max-width: 58ch;
+    max-width: 60ch;
 }
 
 .crs-note {
@@ -181,7 +203,7 @@
     line-height: 1.6;
     letter-spacing: -0.02em;
     color: rgba(255, 255, 255, 0.42);
-    max-width: 58ch;
+    max-width: 60ch;
 }
 
 /* ═══ Apply band ════════════════════════════════════════════════════ */
@@ -196,7 +218,7 @@
 }
 
 .crs-apply-inner {
-    width: min(720px, 100%);
+    width: min(700px, 100%);
     margin: 0 auto;
 }
 
@@ -206,7 +228,7 @@
     border: 1px solid rgba(255, 255, 255, 0.14);
     border-radius: 999px;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 11.5px;
+    font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -216,9 +238,9 @@
 .crs-apply-title {
     margin: 22px 0 0;
     font-family: 'Bricolage Grotesque', sans-serif;
-    font-size: clamp(34px, 4.2vw, 62px);
+    font-size: clamp(32px, 4.2vw, 58px);
     font-weight: 800;
-    line-height: 1.0;
+    line-height: 1.02;
     letter-spacing: -0.05em;
     color: var(--white);
     text-wrap: balance;
@@ -240,10 +262,12 @@
 }
 
 /* ═══ Application modal ═════════════════════════════════════════════ */
+/* Above the mobile-nav overlay (9750) but below the consent banner, which
+   must always stay reachable on top. */
 .crs-modal {
     position: fixed;
     inset: 0;
-    z-index: 4000;
+    z-index: 9800;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -266,7 +290,7 @@
 
 .crs-modal-panel {
     position: relative;
-    width: min(860px, 100%);
+    width: min(820px, 100%);
     max-height: 100%;
     display: flex;
     flex-direction: column;
@@ -292,7 +316,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-    padding: 18px clamp(16px, 2.4vw, 26px);
+    padding: 16px clamp(16px, 2.4vw, 24px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     flex-shrink: 0;
 }
@@ -300,7 +324,7 @@
 .crs-modal-title {
     margin: 0;
     font-family: 'Bricolage Grotesque', sans-serif;
-    font-size: clamp(17px, 1.6vw, 21px);
+    font-size: clamp(16px, 1.6vw, 20px);
     font-weight: 800;
     letter-spacing: -0.035em;
     color: var(--white);
@@ -331,13 +355,19 @@
 
 .crs-modal-body {
     position: relative;
+    flex: 1;
+    min-height: 0;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
-    padding: clamp(10px, 1.6vw, 18px);
+    padding: clamp(10px, 1.6vw, 16px);
 }
 
-/* Fillout paints its own white surface — round it to match the panel. */
+/* The Fillout snippet ships an inline height:700px, which overflows short
+   viewports. !important is the only way past an inline style — this keeps
+   the form sized to whatever space the panel actually has. */
 .crs-modal-body > [data-zite-id] {
+    height: min(700px, calc(100dvh - 150px)) !important;
+    min-height: 420px !important;
     border-radius: 12px;
     overflow: hidden;
 }
@@ -347,32 +377,53 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: min(30ch, 82%);
     margin: 0;
+    text-align: center;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 14px;
     font-weight: 500;
+    line-height: 1.55;
     letter-spacing: -0.02em;
     color: rgba(255, 255, 255, 0.42);
     pointer-events: none;
 }
 
-/* Locks the page behind the modal without the layout jumping as the
-   scrollbar disappears. */
+/* Locks the page behind the modal. The paddingRight compensation is applied
+   inline by careers.js so the layout doesn't jump as the scrollbar goes. */
 body.crs-modal-open {
     overflow: hidden;
 }
 
 /* ═══ Responsive ════════════════════════════════════════════════════ */
 @media (max-width: 900px) {
-    .crs-traits { grid-template-columns: 1fr; }
-    .crs-hero .sp-hero-copy { max-width: none; }
+    .crs-traits { grid-template-columns: minmax(0, 1fr); }
+    /* Single column: every cell keeps its top rule except the first, and
+       nothing carries a left rule any more. */
+    .crs-trait { border-left: none; }
+    .crs-trait:nth-child(-n+2) { border-top: 1px solid rgba(255, 255, 255, 0.1); }
+    .crs-trait:first-child { border-top: none; }
 }
 
 @media (max-width: 600px) {
-    .crs-step { grid-template-columns: 42px minmax(0, 1fr); gap: 12px; }
+    /* Slightly tighter than the service-page default so the longest line
+       ("Work that counts.") still fits on one line at 375px. */
+    .crs-hero .sp-title { font-size: clamp(33px, 9.1vw, 48px); }
+
+    .crs-step { grid-template-columns: 40px minmax(0, 1fr); gap: 14px; }
     .crs-step-num { width: 30px; height: 30px; font-size: 12px; }
+
     .crs-modal { padding: 0; }
-    .crs-modal-panel { border-radius: 0; border: none; max-height: 100dvh; }
+    .crs-modal-panel {
+        width: 100%;
+        height: 100%;
+        max-height: none;
+        border-radius: 0;
+        border: none;
+    }
+    .crs-modal-body > [data-zite-id] {
+        height: calc(100dvh - 122px) !important;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
