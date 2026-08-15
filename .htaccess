@@ -9,7 +9,7 @@ RewriteCond %{THE_REQUEST} \s/+([^?\s]+)\.html(?:[?\s]) [NC]
 RewriteRule ^(.+)\.html$ /$1 [R=301,L,NE]
 
 # Remove an accidental trailing slash from clean page URLs.
-RewriteRule ^(growth-strategy|algorithm-training|creative-strategy|media-buying|seo-geo|privacy-policy|cookie-policy)/$ /$1 [R=301,L]
+RewriteRule ^(growth-strategy|algorithm-training|creative-strategy|media-buying|seo-geo|careers|privacy-policy|cookie-policy)/$ /$1 [R=301,L]
 
 # Internally serve the existing static HTML files at extensionless URLs.
-RewriteRule ^(growth-strategy|algorithm-training|creative-strategy|media-buying|seo-geo|privacy-policy|cookie-policy)$ $1.html [L]
+RewriteRule ^(growth-strategy|algorithm-training|creative-strategy|media-buying|seo-geo|careers|privacy-policy|cookie-policy)$ $1.html [L]
