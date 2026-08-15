@@ -13,6 +13,7 @@
 - [Algorithm Training](https://performore.co/algorithm-training): Server-side tracking, event quality and value signals for advertising platforms.
 - [Creative Strategy](https://performore.co/creative-strategy): Angle-first creative systems, hooks, formats and iterative testing.
 - [Media Buying](https://performore.co/media-buying): Evidence-led paid media management across Meta, Google, TikTok, LinkedIn and Microsoft.
+- [SEO & GEO](https://performore.co/seo-geo): Technical SEO, on-page optimisation, content structure and generative engine optimisation, in four tiers from a one-off audit to full programme ownership.
 
 ## Company details
 

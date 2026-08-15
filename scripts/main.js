@@ -447,6 +447,14 @@ document.querySelectorAll(".faq-question").forEach((button) => {
             badge1: { num: "4.8×", lbl: "ROAS<br>AVERAGE", icon: "design_components/SVG - ABSTRACTS - 110 UNITS/81.svg" },
             badge2: { num: "$84k", lbl: "MANAGED<br>SPEND", icon: "design_components/SVG - ABSTRACTS - 110 UNITS/49.svg" },
         },
+        {
+            title: "SEO & GEO",
+            url: "/seo-geo",
+            image: "design_components/SVG - ABSTRACTS - 110 UNITS/56.svg",
+            icon: "design_components/SVG - ABSTRACTS - 110 UNITS/88.svg",
+            badge1: { num: "+182%", lbl: "ORGANIC<br>SESSIONS", icon: "design_components/SVG - ABSTRACTS - 110 UNITS/44.svg" },
+            badge2: { num: "34%", lbl: "SHARE OF<br>SEARCH", icon: "design_components/SVG - ABSTRACTS - 110 UNITS/29.svg" },
+        },
     ];
 
     const AUTO_MS = 4000;
