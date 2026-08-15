@@ -162,6 +162,11 @@ body > nav.is-scrolled {
     max-height: clamp(138px, 14.5vw, 196px);
 }
 
+.logo-item--publicis img {
+    max-width: clamp(372px, 43.7vw, 686px);
+    max-height: clamp(127px, 14vw, 194px);
+}
+
 /* ═══ 4. Growth Trajectory ══════════════════════════════════════════ */
 .growth-trajectory {
     margin-top: clamp(-28px, -2.4vw, -14px);
@@ -1369,6 +1374,11 @@ body > nav.is-scrolled {
     .logo-item--boost img {
         max-width: 337px;
         max-height: 117px;
+    }
+
+    .logo-item--publicis img {
+        max-width: 398px;
+        max-height: 138px;
     }
 
     .statement-section {
