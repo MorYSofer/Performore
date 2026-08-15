@@ -441,10 +441,6 @@
     color: rgba(255, 255, 255, 0.42);
 }
 
-/* Proof tile accents */
-.seo-proof-section .sp-tile:nth-child(2) .sp-tile-val { color: rgba(125, 211, 252, 0.95); }
-.seo-proof-section .sp-tile:nth-child(3) .sp-tile-val { color: var(--teal); }
-
 /* ═══ Responsive ════════════════════════════════════════════════════ */
 @media (max-width: 900px) {
     .seo-tiers { grid-template-columns: 1fr; }
