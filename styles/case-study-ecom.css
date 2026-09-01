@@ -1,0 +1,363 @@
+/* ─── CASE STUDY · ECOMMERCE (unlisted page) ───
+   Loads after service-page.css and case-study.css and only extends them.
+   The hero shell, .sp-h2, .sp-head-copy, the pillar grid, the CTA and the
+   footer all come from those two files; the ce-prefixed classes below are
+   the three things this page needs that they don't already provide.
+
+   The page is deliberately short: results, what we changed, the loop that
+   made it compound. The headline figures appear once, in the hero.
+
+   The account is anonymised: relative movement only. No brand, no logo, no
+   absolute revenue, order or unit counts, no currency amounts, no dates. */
+
+/* ═══ Hero ══════════════════════════════════════════════════════════
+   The hero carries the results, so it drops to a single column and the
+   metric band sits directly under the copy, above the fold. */
+.pg-ecom .sp-hero {
+    padding-top: clamp(126px, 15vh, 172px);
+    padding-bottom: clamp(54px, 7vh, 88px);
+    min-height: auto;
+}
+
+/* Single column, so the shared two-column gap would only add dead space
+   between the copy and the metric band. */
+.pg-ecom .sp-hero-inner {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+    gap: 0;
+}
+
+.pg-ecom .sp-hero-copy { max-width: 880px; }
+
+.pg-ecom .sp-title { font-size: clamp(40px, 5.4vw, 84px); }
+
+.pg-ecom .sp-lede { max-width: 58ch; }
+
+/* ═══ Results band ══════════════════════════════════════════════════
+   The page's only quantitative claim. The period is written into every
+   label so no figure can be read as an all-time or campaign-level number. */
+.ce-results-label {
+    display: block;
+    margin-top: clamp(34px, 5vh, 52px);
+    margin-bottom: 16px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--cs-ink-4);
+}
+
+.ce-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(12px, 1.4vw, 20px);
+}
+
+.ce-metric {
+    position: relative;
+    padding: clamp(24px, 2.6vw, 36px) clamp(20px, 2.2vw, 32px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.095);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.014)),
+        rgba(8, 9, 15, 0.74);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.07),
+        0 24px 70px rgba(2, 4, 14, 0.42);
+    overflow: hidden;
+}
+
+.ce-metric::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 auto;
+    height: 2px;
+    background: linear-gradient(90deg, var(--acc), transparent 80%);
+    opacity: 0.75;
+}
+
+.ce-metric-val {
+    display: block;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(42px, 4.6vw, 68px);
+    font-weight: 800;
+    letter-spacing: -0.055em;
+    line-height: 1;
+    color: var(--acc);
+}
+
+.ce-metric-lbl {
+    display: block;
+    margin-top: 13px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(13.5px, 1.15vw, 16px);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    color: var(--white);
+}
+
+.ce-metric-note {
+    display: block;
+    margin-top: 7px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12.5px;
+    font-weight: 500;
+    line-height: 1.45;
+    letter-spacing: -0.018em;
+    color: var(--cs-ink-3);
+}
+
+/* The one caveat the figures need, kept to a line rather than a section. */
+.ce-metrics-note {
+    margin: 18px 4px 0;
+    max-width: 88ch;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12.5px;
+    font-weight: 500;
+    line-height: 1.55;
+    letter-spacing: -0.01em;
+    color: var(--cs-ink-4);
+}
+
+/* ═══ Creative-learning band under the pillar grid ══════════════════
+   The fifth item is not a pillar: it is the loop that keeps the other
+   four current, so it reads as a band beneath them. */
+.ce-loopband {
+    position: relative;
+    margin-top: clamp(18px, 2vw, 26px);
+    padding: clamp(26px, 2.8vw, 38px);
+    border-radius: 22px;
+    border: 1px solid rgba(79, 122, 244, 0.24);
+    background:
+        linear-gradient(180deg, rgba(79, 122, 244, 0.07), rgba(79, 122, 244, 0.015)),
+        rgba(8, 9, 15, 0.7);
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: clamp(20px, 3vw, 48px);
+    align-items: center;
+}
+
+.ce-loopband-idx {
+    display: block;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(122, 156, 248, 0.9);
+    margin-bottom: 14px;
+}
+
+.ce-loopband-name {
+    margin: 0;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(21px, 2.1vw, 28px);
+    font-weight: 800;
+    letter-spacing: -0.042em;
+    line-height: 1.08;
+    color: var(--white);
+}
+
+.ce-loopband-copy {
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14.5px;
+    font-weight: 500;
+    line-height: 1.62;
+    letter-spacing: -0.02em;
+    color: var(--cs-ink-2);
+}
+
+/* ═══ The loop ══════════════════════════════════════════════════════
+   One row of nodes joined by arrows, closing on itself. Stacks to a
+   column at the site's tablet breakpoint, where the arrows turn with
+   the layout rather than the diagram being redrawn. */
+.ce-loop-section {
+    position: relative;
+    padding: var(--section-y) var(--section-x);
+    background:
+        radial-gradient(ellipse 54% 44% at 78% 26%, rgba(29, 232, 181, 0.055), transparent 62%),
+        var(--bg);
+}
+
+.ce-loop-inner {
+    width: min(var(--page-max), 100%);
+    margin: 0 auto;
+}
+
+.ce-loop-head {
+    max-width: 680px;
+    margin-bottom: clamp(40px, 6vh, 64px);
+}
+
+.ce-flow {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+}
+
+.ce-flow-node {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: clamp(18px, 1.9vw, 26px) clamp(16px, 1.6vw, 22px);
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.085);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.038), rgba(255, 255, 255, 0.008)),
+        rgba(8, 9, 15, 0.7);
+}
+
+.ce-flow-idx {
+    display: block;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 10px;
+}
+
+.ce-flow-name {
+    display: block;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(15px, 1.35vw, 18px);
+    font-weight: 800;
+    letter-spacing: -0.038em;
+    line-height: 1.16;
+    color: var(--white);
+}
+
+.ce-flow-note {
+    display: block;
+    margin-top: 8px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12.5px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -0.018em;
+    color: var(--cs-ink-3);
+}
+
+.ce-flow-arrow {
+    position: relative;
+    flex: 0 0 auto;
+    align-self: center;
+    width: clamp(20px, 2.4vw, 40px);
+    height: 20px;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.ce-flow-arrow::before {
+    content: '';
+    position: absolute;
+    left: 2px;
+    right: 4px;
+    top: 50%;
+    height: 1px;
+    background: currentColor;
+}
+
+.ce-flow-arrow::after {
+    content: '';
+    position: absolute;
+    right: 3px;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    border-top: 1.4px solid currentColor;
+    border-right: 1.4px solid currentColor;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+/* The loop closing on itself: a dashed return path under the row. */
+.ce-flow-return {
+    position: relative;
+    height: clamp(30px, 4vh, 42px);
+    margin: 0 clamp(30px, 6vw, 90px);
+    border: 1px dashed rgba(255, 255, 255, 0.17);
+    border-top: none;
+    border-radius: 0 0 18px 18px;
+}
+
+.ce-flow-return-lbl {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    padding: 5px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: var(--bg);
+    white-space: nowrap;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--cs-ink-3);
+}
+
+.ce-loop-foot {
+    margin: clamp(34px, 4.6vh, 48px) 0 0;
+    max-width: 74ch;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(15px, 1.2vw, 17px);
+    font-weight: 500;
+    line-height: 1.66;
+    letter-spacing: -0.022em;
+    color: var(--cs-ink-2);
+}
+
+.ce-loop-foot strong {
+    font-weight: 700;
+    color: var(--white);
+}
+
+/* ═══ Responsive ════════════════════════════════════════════════════ */
+@media (max-width: 1023px) {
+    .ce-loopband { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+    .ce-metrics { gap: 10px; }
+
+    /* The loop stacks rather than being redrawn: the nodes go vertical
+       and the arrows turn with them. */
+    .ce-flow { flex-direction: column; align-items: stretch; }
+    .ce-flow-arrow {
+        width: clamp(24px, 5vw, 32px);
+        height: clamp(24px, 5vw, 32px);
+        align-self: center;
+        transform: rotate(90deg);
+    }
+    .ce-flow-return {
+        height: auto;
+        margin: 14px 0 0;
+        border: none;
+        display: flex;
+        justify-content: center;
+    }
+    .ce-flow-return-lbl {
+        position: static;
+        transform: none;
+        background: rgba(255, 255, 255, 0.03);
+    }
+}
+
+@media (max-width: 760px) {
+    .ce-metrics { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+    .ce-metric { padding: 20px 22px; }
+    .ce-metric-val { font-size: 44px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ce-metric,
+    .ce-flow-node { transition: none; }
+}
+
+/* The hero action sits below the results, so the proof is read before the
+   ask. Extra breathing room because it follows a fine-print line. */
+.pg-ecom .sp-actions { margin-top: clamp(26px, 3.4vh, 36px); }

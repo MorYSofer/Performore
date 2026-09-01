@@ -26,6 +26,9 @@ ScrollTrigger.config({ ignoreMobileResize: true });
     const actions = document.querySelector(".sp-actions");
     const cards = gsap.utils.toArray(".sp-card");
     const ambient = gsap.utils.toArray(".sp-ambient-label");
+    // Pages that lead with content under the copy instead of a card cluster
+    // (the case studies) mark it [data-hero-cue] to join the same intro.
+    const cues = gsap.utils.toArray("[data-hero-cue]");
     if (!lines.length) return;
 
     if (spReduceMotion) return;
@@ -35,57 +38,67 @@ ScrollTrigger.config({ ignoreMobileResize: true });
 
     gsap.set([crumbs, lede, actions], { opacity: 0, y: 22 });
     gsap.set(lines, { opacity: 0, y: 42 });
-    gsap.set(cards, { opacity: 0, y: 34, scale: 0.96 });
+    if (cards.length) gsap.set(cards, { opacity: 0, y: 34, scale: 0.96 });
+    if (cues.length) gsap.set(cues, { opacity: 0, y: 26 });
 
     const tl = gsap.timeline({ delay: 0.15 });
 
     tl.to(crumbs, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" })
         .to(lines, { opacity: 1, y: 0, duration: 0.76, stagger: 0.1, ease: "power3.out" }, "-=0.25")
         .to(lede, { opacity: 1, y: 0, duration: 0.55, ease: "power2.out" }, "-=0.4")
-        .to(actions, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, "-=0.35")
-        .to(cards, { opacity: 1, y: 0, scale: 1, duration: 0.9, stagger: 0.14, ease: "power3.out" }, "-=0.55")
-        .add(() => {
-            const floatConfigs = [
-                { y: 15, x: -5, rot: -1.2, dur: 3.6, delay: 0.0 },
-                { y: 19, x: 6, rot: 1.5, dur: 3.0, delay: 0.5 },
-                { y: 12, x: 4, rot: -0.8, dur: 4.2, delay: 0.9 },
-            ];
-            cards.forEach((card, i) => {
-                const c = floatConfigs[i] || floatConfigs[0];
-                gsap.to(card, {
-                    y: `+=${c.y}`,
-                    x: `+=${c.x}`,
-                    rotation: (cardRotations[i] || 0) + c.rot,
-                    duration: c.dur,
-                    repeat: -1,
-                    yoyo: true,
-                    ease: "sine.inOut",
-                    delay: c.delay
-                });
-            });
-            ambient.forEach((el, i) => {
-                gsap.to(el, {
-                    y: `+=${9 + i * 4}`,
-                    x: `+=${i % 2 === 0 ? -(3 + i) : (3 + i)}`,
-                    duration: 8 + i * 2,
-                    repeat: -1,
-                    yoyo: true,
-                    ease: "sine.inOut"
-                });
+        .to(actions, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, "-=0.35");
+
+    if (cues.length) {
+        tl.to(cues, { opacity: 1, y: 0, duration: 0.66, stagger: 0.09, ease: "power3.out" }, "-=0.2");
+    }
+    if (cards.length) {
+        tl.to(cards, { opacity: 1, y: 0, scale: 1, duration: 0.9, stagger: 0.14, ease: "power3.out" }, "-=0.55");
+    }
+
+    tl.add(() => {
+        const floatConfigs = [
+            { y: 15, x: -5, rot: -1.2, dur: 3.6, delay: 0.0 },
+            { y: 19, x: 6, rot: 1.5, dur: 3.0, delay: 0.5 },
+            { y: 12, x: 4, rot: -0.8, dur: 4.2, delay: 0.9 },
+        ];
+        cards.forEach((card, i) => {
+            const c = floatConfigs[i] || floatConfigs[0];
+            gsap.to(card, {
+                y: `+=${c.y}`,
+                x: `+=${c.x}`,
+                rotation: (cardRotations[i] || 0) + c.rot,
+                duration: c.dur,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut",
+                delay: c.delay
             });
         });
+        ambient.forEach((el, i) => {
+            gsap.to(el, {
+                y: `+=${9 + i * 4}`,
+                x: `+=${i % 2 === 0 ? -(3 + i) : (3 + i)}`,
+                duration: 8 + i * 2,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut"
+            });
+        });
+    });
 
     // Gentle parallax on the card cluster as the hero scrolls away
-    gsap.to(".sp-hero-visual", {
-        y: -46,
-        ease: "none",
-        scrollTrigger: {
-            trigger: ".sp-hero",
-            start: "top top",
-            end: "bottom top",
-            scrub: 1.4
-        }
-    });
+    if (document.querySelector(".sp-hero-visual")) {
+        gsap.to(".sp-hero-visual", {
+            y: -46,
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".sp-hero",
+                start: "top top",
+                end: "bottom top",
+                scrub: 1.4
+            }
+        });
+    }
 }());
 
 // ── Statement — scrubbed word reveal ────────────────────────────────
