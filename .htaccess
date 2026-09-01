@@ -8,8 +8,15 @@ RewriteRule ^index\.html$ / [R=301,L]
 RewriteCond %{THE_REQUEST} \s/+([^?\s]+)\.html(?:[?\s]) [NC]
 RewriteRule ^(.+)\.html$ /$1 [R=301,L,NE]
 
+# Case studies moved under /case-studies/. The B2B page was already live at the
+# old flat URL and is shared by direct link only, so that link has to keep
+# working — send it on rather than 404ing.
+RewriteRule ^case-study-b2b-saas/?$ /case-studies/b2b-saas [R=301,L]
+
 # Remove an accidental trailing slash from clean page URLs.
-RewriteRule ^(growth-strategy|algorithm-training|creative-strategy|media-buying|seo-geo|careers|privacy-policy|cookie-policy|case-study-b2b-saas)/$ /$1 [R=301,L]
+RewriteRule ^(growth-strategy|algorithm-training|creative-strategy|media-buying|seo-geo|careers|privacy-policy|cookie-policy)/$ /$1 [R=301,L]
+RewriteRule ^(case-studies/b2b-saas)/$ /$1 [R=301,L]
 
 # Internally serve the existing static HTML files at extensionless URLs.
-RewriteRule ^(growth-strategy|algorithm-training|creative-strategy|media-buying|seo-geo|careers|privacy-policy|cookie-policy|case-study-b2b-saas)$ $1.html [L]
+RewriteRule ^(growth-strategy|algorithm-training|creative-strategy|media-buying|seo-geo|careers|privacy-policy|cookie-policy)$ $1.html [L]
+RewriteRule ^case-studies/(b2b-saas)$ case-studies/$1.html [L]
