@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Consent Mode v2 — default state (must load before Google Tag Manager) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied',
+        'personalization_storage': 'denied',
+        'functionality_storage': 'granted',
+        'security_storage': 'granted',
+        'wait_for_update': 500
+      });
+      gtag('set', 'ads_data_redaction', true);
+      gtag('set', 'url_passthrough', true);
+      try {
+        var pmC = JSON.parse(localStorage.getItem('pm_consent') || 'null');
+        if (pmC && pmC.v === 2) {
+          gtag('consent', 'update', {
+            'ad_storage': pmC.ad ? 'granted' : 'denied',
+            'ad_user_data': pmC.ad ? 'granted' : 'denied',
+            'ad_personalization': pmC.ad ? 'granted' : 'denied',
+            'analytics_storage': pmC.an ? 'granted' : 'denied',
+            'personalization_storage': pmC.ad ? 'granted' : 'denied'
+          });
+          dataLayer.push({
+            'consent_ads': pmC.ad ? 'granted' : 'denied',
+            'consent_analytics': pmC.an ? 'granted' : 'denied'
+          });
+        }
+      } catch (e) {}
+    </script>
+    <!-- End Google Consent Mode v2 default -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M5ZBQRC5');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case study — B2B SaaS: 3&times; customers, 54% lower CAC | Performore</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+    <!-- Unlisted page. Reachable by direct link only: no index, no menu entry,
+         no sitemap record. Robots.txt intentionally allows crawling so that
+         this directive can actually be read. -->
+    <meta name="robots" content="noindex, nofollow, noarchive, noimageindex">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="description" content="Eleven months of paid media for a B2B SaaS company: new customers per month compounding at +11.5% (3× overall) while acquisition cost fell 7.6% a month (−54% overall).">
+    <meta property="og:title" content="Case study — B2B SaaS">
+    <meta property="og:description" content="Eleven months of paid media: +11.5% new customers month on month, −7.6% acquisition cost month on month.">
+    <meta property="og:type" content="article">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Dancing+Script:wght@700&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/nav.css">
+    <link rel="stylesheet" href="styles/refinements.css">
+    <link rel="stylesheet" href="styles/service-page.css">
+    <link rel="stylesheet" href="styles/case-study.css">
+</head>
+<body class="sp-body pg-case">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M5ZBQRC5"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- NAV -->
+    <nav>
+        <a href="/" class="logo" aria-label="Performore">
+            <img src="image_assets/performore_brand_logo_white.webp" alt="Performore" decoding="async" fetchpriority="high">
+        </a>
+        <ul class="nav-links" aria-label="Primary">
+            <li><a href="/">Home</a></li>
+            <li><a href="/#clients">Clients</a></li>
+            <li><a href="/#results">Results</a></li>
+            <li class="nav-services">
+                <a href="/#services" class="nav-services-trigger">
+                    Services
+                    <svg class="nav-services-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="m6 9 6 6 6-6"/>
+                    </svg>
+                </a>
+                <div class="nav-services-panel" role="menu" aria-label="Services">
+                    <a href="/growth-strategy" class="nav-services-item" role="menuitem">
+                        <span class="nav-services-badge" style="--svc-accent:#4f7af4"></span>
+                        <span class="nav-services-body">
+                            <span class="nav-services-title">Growth Strategy</span>
+                            <span class="nav-services-desc">Funnel, unit economics and a 90-day plan.</span>
+                        </span>
+                    </a>
+                    <a href="/algorithm-training" class="nav-services-item" role="menuitem">
+                        <span class="nav-services-badge" style="--svc-accent:#1de8b5"></span>
+                        <span class="nav-services-body">
+                            <span class="nav-services-title">Algorithm Training</span>
+                            <span class="nav-services-desc">Tracking and signals the algorithm learns from.</span>
+                        </span>
+                    </a>
+                    <a href="/creative-strategy" class="nav-services-item" role="menuitem">
+                        <span class="nav-services-badge" style="--svc-accent:#c040e6"></span>
+                        <span class="nav-services-body">
+                            <span class="nav-services-title">Creative Strategy</span>
+                            <span class="nav-services-desc">Angle-first creative, tested weekly.</span>
+                        </span>
+                    </a>
+                    <a href="/media-buying" class="nav-services-item" role="menuitem">
+                        <span class="nav-services-badge" style="--svc-accent:#818cf8"></span>
+                        <span class="nav-services-body">
+                            <span class="nav-services-title">Media Buying</span>
+                            <span class="nav-services-desc">Budget run like a portfolio, not a pile of campaigns.</span>
+                        </span>
+                    </a>
+                    <a href="/seo-geo" class="nav-services-item" role="menuitem">
+                        <span class="nav-services-badge" style="--svc-accent:#38bdf8"></span>
+                        <span class="nav-services-body">
+                            <span class="nav-services-title">SEO &amp; GEO</span>
+                            <span class="nav-services-desc">Ranked in search, quoted by the assistants.</span>
+                        </span>
+                    </a>
+                </div>
+            </li>
+            <li><a href="/#faq">FAQ</a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="javascript:void(0)" class="cta" data-cal-link="morsofer/25-mins-with-performore" data-cal-namespace="25-mins-with-performore" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+                <div class="cta-circle">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+                         stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </div>
+                Start growth sprint
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="sp-hero" id="top" aria-labelledby="csHeroTitle">
+        <div class="sp-hero-ambient" aria-hidden="true">
+            <span class="sp-ambient-label" style="top:12%;left:2.5%">Customers</span>
+            <span class="sp-ambient-label" style="top:56%;left:1.5%">CAC</span>
+            <span class="sp-ambient-label" style="bottom:12%;left:3%">Creative testing</span>
+            <span class="sp-ambient-label" style="top:10%;right:2.5%">Conversion signals</span>
+            <span class="sp-ambient-label" style="top:42%;right:1.5%">Personas</span>
+            <span class="sp-ambient-label" style="bottom:10%;right:3%">Retargeting</span>
+        </div>
+
+        <div class="sp-hero-inner">
+            <div class="sp-hero-copy">
+                <div class="sp-crumbs">
+                    <span class="sp-crumb-link">Case study</span>
+                    <span class="sp-crumb-sep" aria-hidden="true">/</span>
+                    <span class="sp-crumb-chip">B2B SaaS &middot; Paid media</span>
+                </div>
+                <h1 class="sp-title" id="csHeroTitle">
+                    <span class="sp-line">3&times; the</span>
+                    <span class="sp-line"><span class="sp-grad">customers</span>.</span>
+                    <span class="sp-line">54% less each.</span>
+                </h1>
+                <p class="sp-lede">
+                    A B2B SaaS company on a self-serve motion. Across eleven months of paid
+                    media, new customers per month compounded at <strong>&plus;11.5%</strong>
+                    while the cost of acquiring each one fell <strong>7.6%</strong> a month
+                    &mdash; tripling volume and more than halving the price of it.
+                </p>
+                <div class="sp-actions">
+                    <a href="#numbers" class="sp-btn-primary">
+                        <span>See the results</span>
+                        <span class="sp-btn-icon" aria-hidden="true">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                                 stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 5v14M5 12l7 7 7-7"/>
+                            </svg>
+                        </span>
+                    </a>
+                    <a href="#playbook" class="sp-btn-ghost">What we actually did</a>
+                </div>
+            </div>
+
+            <div class="sp-hero-visual" aria-hidden="true">
+                <div class="sp-card sp-card-funnel">
+                    <div class="sp-card-label">
+                        <span class="sp-card-dot" style="background:#4f7af4"></span>
+                        Customers / month
+                    </div>
+                    <div class="cs-hero-stat">
+                        <span class="cs-hero-stat-val">3&times;</span>
+                    </div>
+                    <span class="cs-hero-stat-sub">Over 11 months &mdash; an average of &plus;11.5% month on month.</span>
+                </div>
+
+                <div class="sp-card sp-card-econ">
+                    <div class="sp-card-label">
+                        <span class="sp-card-dot" style="background:#1de8b5"></span>
+                        Acquisition cost
+                    </div>
+                    <div class="cs-hero-stat">
+                        <span class="cs-hero-stat-val">&minus;54%</span>
+                    </div>
+                    <span class="cs-hero-stat-sub">Over 11 months &mdash; an average of &minus;7.6% month on month.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="sp-hero-scrollhint" aria-hidden="true">
+            <span class="sp-scrollhint-line"></span>
+            <span class="sp-scrollhint-text">Scroll</span>
+        </div>
+    </section>
+
+    <!-- CONTEXT -->
+    <section class="cs-context" aria-label="Engagement context">
+        <div class="cs-context-inner">
+            <div data-reveal>
+                <span class="cs-fact-lbl">The business</span>
+                <span class="cs-fact-val">B2B SaaS</span>
+                <span class="cs-fact-note">A subscription platform sold to businesses, on a self-serve motion.</span>
+            </div>
+            <div data-reveal data-reveal-delay="0.07">
+                <span class="cs-fact-lbl">Our remit</span>
+                <span class="cs-fact-val">Paid media, end to end</span>
+                <span class="cs-fact-note">Strategy, creative production, buying and the conversion signals underneath it.</span>
+            </div>
+            <div data-reveal data-reveal-delay="0.14">
+                <span class="cs-fact-lbl">Period reported</span>
+                <span class="cs-fact-val">Eleven months</span>
+                <span class="cs-fact-note">One continuous engagement, reported month by month.</span>
+            </div>
+            <div data-reveal data-reveal-delay="0.21">
+                <span class="cs-fact-lbl">Channels</span>
+                <span class="cs-fact-val">Meta and Google</span>
+                <span class="cs-fact-note">Prospecting and a layered retargeting funnel across both.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- HEADLINE RESULTS -->
+    <section class="sp-metrics" id="numbers" aria-labelledby="csResultsTitle">
+        <div class="sp-metrics-inner">
+            <div class="sp-metrics-head" data-reveal>
+                <h2 class="sp-h2" id="csResultsTitle">Two results, over eleven months.</h2>
+                <p class="sp-head-copy">More customers every month, each one cheaper to win than the last. Both are shown as a month-on-month rate as well, so they can be compared against your own.</p>
+            </div>
+
+            <div class="sp-tiles">
+                <div class="sp-tile">
+                    <p class="sp-tile-q">New customers acquired each month, first month of the engagement to the eleventh.</p>
+                    <span class="sp-tile-val" data-count-to="3" data-suffix="&times;">3&times;</span>
+                    <span class="sp-tile-lbl">More customers</span>
+                    <span class="cs-tile-rate">Over 11 months &middot; avg. <strong>&plus;11.5%</strong> MoM</span>
+                </div>
+                <div class="sp-tile">
+                    <p class="sp-tile-q">Cost to acquire each one, measured over the same eleven months.</p>
+                    <span class="sp-tile-val" data-count-to="54" data-prefix="&minus;" data-suffix="%">&minus;54%</span>
+                    <span class="sp-tile-lbl">Lower acquisition cost</span>
+                    <span class="cs-tile-rate">Over 11 months &middot; avg. <strong>&minus;7.6%</strong> MoM</span>
+                </div>
+            </div>
+            <p class="sp-tiles-note" data-reveal data-reveal-delay="0.3">Month-on-month figures are the compound average rate across the engagement, not a single month's change.</p>
+        </div>
+    </section>
+
+    <!-- STATEMENT -->
+    <section class="sp-statement" aria-label="Point of view">
+        <div class="sp-statement-glow" aria-hidden="true"></div>
+        <p class="sp-statement-body">
+            The product truth did the converting. The persona only decided who leaned in.
+        </p>
+    </section>
+
+    <!-- PLAYBOOK -->
+    <section class="cs-play" id="playbook" aria-labelledby="csPlayTitle">
+        <div class="cs-play-inner">
+            <div class="cs-play-head" data-reveal>
+                <h2 class="sp-h2" id="csPlayTitle">Four things changed.</h2>
+                <p class="sp-head-copy">In roughly this order, because each one only pays off once the one before it is in place.</p>
+            </div>
+
+            <div class="cs-pillars">
+                <article class="cs-pillar" style="--acc:#1de8b5" data-reveal>
+                    <div class="cs-pillar-top">
+                        <span class="cs-pillar-idx">01 &middot; Weeks 1&ndash;4</span>
+                    </div>
+                    <h3 class="cs-pillar-name">Fix the signals before touching the ads</h3>
+                    <p class="cs-pillar-copy">Optimising creative against a broken conversion event just teaches the algorithm faster in the wrong direction. So the tracking went first.</p>
+                    <ul class="cs-pillar-list">
+                        <li>Server-side conversions to both platforms, deduplicated against the browser event</li>
+                        <li>One registration event split into three: account created, first workflow completed, first payment</li>
+                        <li>Values attached to each, so bidding chases the customers who stay</li>
+                        <li>Enriched match data, lifting Meta's event quality out of the range where targeting guesses</li>
+                    </ul>
+                    <div class="cs-pillar-out">
+                        <span class="cs-pillar-out-val">3</span>
+                        <span class="cs-pillar-out-lbl">Optimisation events, valued, where there had been one</span>
+                    </div>
+                </article>
+
+                <article class="cs-pillar" style="--acc:#c040e6" data-reveal data-reveal-delay="0.08">
+                    <div class="cs-pillar-top">
+                        <span class="cs-pillar-idx">02 &middot; Weeks 3&ndash;8</span>
+                    </div>
+                    <h3 class="cs-pillar-name">Find the product truth, then cast it</h3>
+                    <p class="cs-pillar-copy">We went looking for the specific thing the product removes from someone's week. One sentence, from support tickets and cancellation calls rather than the pitch deck. That sentence became the spine of every ad.</p>
+                    <ul class="cs-pillar-list">
+                        <li>The truth held constant; the person telling it changed</li>
+                        <li>Distinct buyer personas &mdash; the founder, the ops lead who inherits the process, the person who has to sign off the spend</li>
+                        <li>Each one got the same promise phrased in the language of its own bad afternoon</li>
+                        <li>Winning angles rebuilt in four formats rather than retired at the first sign of fatigue</li>
+                    </ul>
+                    <div class="cs-pillar-out">
+                        <span class="cs-pillar-out-val">1</span>
+                        <span class="cs-pillar-out-lbl">Product truth, told through several buyer personas</span>
+                    </div>
+                </article>
+
+                <article class="cs-pillar" style="--acc:#4f7af4" data-reveal data-reveal-delay="0.16">
+                    <div class="cs-pillar-top">
+                        <span class="cs-pillar-idx">03 &middot; Ongoing, weekly</span>
+                    </div>
+                    <h3 class="cs-pillar-name">Testing and production as one loop</h3>
+                    <p class="cs-pillar-copy">Testing without a production line stalls the moment a winner appears and there is nothing to follow it with. We ran them as a single weekly cadence so the queue never emptied.</p>
+                    <ul class="cs-pillar-list">
+                        <li>One variable per test &mdash; hook, or format, or persona, never all three</li>
+                        <li>Results read on hook rate and cost per qualified customer, not on likes</li>
+                        <li>Losers cut on a fixed threshold, so no ad survived on sentiment</li>
+                        <li>Winners immediately iterated into the next week's batch</li>
+                    </ul>
+                    <div class="cs-pillar-out">
+                        <span class="cs-pillar-out-val">Weekly</span>
+                        <span class="cs-pillar-out-lbl">Test, read, cut, rebuild &mdash; for eleven months</span>
+                    </div>
+                </article>
+
+                <article class="cs-pillar" style="--acc:#38bdf8" data-reveal data-reveal-delay="0.24">
+                    <div class="cs-pillar-top">
+                        <span class="cs-pillar-idx">04 &middot; From week 6</span>
+                    </div>
+                    <h3 class="cs-pillar-name">Build the funnel a decision actually takes</h3>
+                    <p class="cs-pillar-copy">Nobody changes the software their team works in on a first impression. The retargeting was rebuilt in layers, so the second, third and fourth touch each had a job instead of repeating the first.</p>
+                    <ul class="cs-pillar-list">
+                        <li>Audiences split by depth of engagement, not just by recency window</li>
+                        <li>A different objection answered at each layer</li>
+                        <li>Frequency capped per layer so the ladder persuades instead of nagging</li>
+                        <li>Budget weighted toward the layers that were actually closing</li>
+                    </ul>
+                    <div class="cs-pillar-out">
+                        <span class="cs-pillar-out-val">4</span>
+                        <span class="cs-pillar-out-lbl">Retargeting layers, each with its own message</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE LADDER -->
+    <section class="cs-ladder-section" id="ladder" aria-labelledby="csLadderTitle">
+        <div class="cs-ladder-inner">
+            <div class="cs-ladder-head" data-reveal>
+                <h2 class="sp-h2" id="csLadderTitle">The four touches.</h2>
+                <p class="sp-head-copy">Most of the customers in this account did not convert on the ad that introduced them. They converted on the second, third or fourth &mdash; which is only possible if those touches say something new.</p>
+            </div>
+
+            <div class="cs-ladder">
+                <article class="cs-rung" style="--acc:#4f7af4" data-reveal>
+                    <span class="cs-rung-touch">01</span>
+                    <span class="cs-rung-when">Cold &middot; prospecting</span>
+                    <h3 class="cs-rung-name">Name the problem</h3>
+                    <p class="cs-rung-copy">The product truth, delivered in the voice of one specific buyer persona. No feature list, no pricing. The only job is recognition.</p>
+                    <span class="cs-rung-msg">&ldquo;You did this manually again last week, didn't you.&rdquo;</span>
+                </article>
+
+                <article class="cs-rung" style="--acc:#c040e6" data-reveal data-reveal-delay="0.08">
+                    <span class="cs-rung-touch">02</span>
+                    <span class="cs-rung-when">Engaged &middot; 3&ndash;7 days</span>
+                    <h3 class="cs-rung-name">Show the mechanism</h3>
+                    <p class="cs-rung-copy">They recognised themselves and left. Now the ad proves the thing is real: the actual screen, the actual number of minutes it takes.</p>
+                    <span class="cs-rung-msg">&ldquo;Here is the whole thing, in about four minutes.&rdquo;</span>
+                </article>
+
+                <article class="cs-rung" style="--acc:#38bdf8" data-reveal data-reveal-delay="0.16">
+                    <span class="cs-rung-touch">03</span>
+                    <span class="cs-rung-when">Visited &middot; 7&ndash;14 days</span>
+                    <h3 class="cs-rung-name">Answer the objection</h3>
+                    <p class="cs-rung-copy">By now the hesitation is specific &mdash; switching cost, migration, whether the rest of the team will actually adopt it. So the ad addresses that, not the original promise.</p>
+                    <span class="cs-rung-msg">&ldquo;Moving your data across takes an afternoon. Here's how.&rdquo;</span>
+                </article>
+
+                <article class="cs-rung" style="--acc:#1de8b5" data-reveal data-reveal-delay="0.24">
+                    <span class="cs-rung-touch">04</span>
+                    <span class="cs-rung-when">Abandoned &middot; 14&ndash;30 days</span>
+                    <h3 class="cs-rung-name">Remove the last reason to wait</h3>
+                    <p class="cs-rung-copy">They started and stopped. Proof from a business that looks like theirs, and the smallest possible next step &mdash; finish the half-built account, nothing more.</p>
+                    <span class="cs-rung-msg">&ldquo;Your workspace is still there. Two fields left.&rdquo;</span>
+                </article>
+            </div>
+
+            <p class="cs-ladder-note" data-reveal>The reason this lowers acquisition cost rather than just adding spend: layers two through four talk to people the first ad already paid for. Every customer recovered there arrives against a click that was bought once.</p>
+        </div>
+    </section>
+
+    <!-- BOOK A CALL CTA -->
+    <section class="book-call-section" id="book-call">
+        <div class="book-call-inner">
+            <div class="book-call-copy">
+                <span class="book-call-kicker">Ready when you are</span>
+                <h2 class="book-call-title">Want the same teardown?</h2>
+                <p class="book-call-text">One call, screen-share into your accounts. We'll show you where your conversion signals are lying to the algorithm and what your creative is actually testing. If it's not a fit, you keep the notes.</p>
+                <a class="book-call-button" href="javascript:void(0)" aria-label="Book a paid media call with Performore" data-cal-link="morsofer/25-mins-with-performore" data-cal-namespace="25-mins-with-performore" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+                    <span>Book a call</span>
+                    <span class="book-call-button-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+
+            <div class="book-call-visual" aria-label="Founder-led growth call">
+                <span class="book-call-ring book-call-ring-one" aria-hidden="true"></span>
+                <span class="book-call-ring book-call-ring-two" aria-hidden="true"></span>
+                <span class="book-call-arc" aria-hidden="true"></span>
+
+                <div class="book-call-photo">
+                    <img src="image_assets/hero_photos/Mor_webp.webp" alt="Mor Sofer, founder of Performore" loading="lazy" decoding="async">
+                </div>
+
+                <a class="book-call-orbit" href="javascript:void(0)" aria-label="Book a paid media call" data-cal-link="morsofer/25-mins-with-performore" data-cal-namespace="25-mins-with-performore" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+
+                <div class="book-call-tags" aria-label="What we changed">
+                    <span>Signals</span>
+                    <span>Creative</span>
+                    <span>Personas</span>
+                    <span>Retargeting</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <a href="/" class="footer-logo" aria-label="Performore">
+                <img src="image_assets/performore_brand_logo_white.webp" alt="Performore" loading="lazy" decoding="async">
+            </a>
+            <nav class="footer-links" aria-label="Footer">
+                <a href="/">Home</a>
+                <a href="/#clients">Clients</a>
+                <a href="/#results">Results</a>
+                <a href="/#faq">FAQ</a>
+                <a href="/careers">Careers</a>
+            </nav>
+            <a href="javascript:void(0)" class="footer-cta" data-cal-link="morsofer/25-mins-with-performore" data-cal-namespace="25-mins-with-performore" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'>Start growth sprint</a>
+        </div>
+        <div class="site-footer-services">
+            <span class="footer-services-lbl">What we do</span>
+            <nav class="footer-services-links" aria-label="Services">
+                <a href="/growth-strategy">Growth Strategy</a>
+                <a href="/algorithm-training">Algorithm Training</a>
+                <a href="/creative-strategy">Creative Strategy</a>
+                <a href="/media-buying">Media Buying</a>
+                <a href="/seo-geo">SEO &amp; GEO</a>
+            </nav>
+        </div>
+        <div class="site-footer-meta">
+            <div class="footer-meta-contact">
+                <a href="mailto:hello@performore.co">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                    hello@performore.co
+                </a>
+                <a href="https://www.linkedin.com/company/107313126/" target="_blank" rel="noopener noreferrer" aria-label="Performore on LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    LinkedIn
+                </a>
+            </div>
+            <nav class="footer-legal-nav" aria-label="Legal">
+                <a href="/privacy-policy">Privacy Policy</a>
+                <a href="/cookie-policy">Cookie Policy</a>
+            </nav>
+        </div>
+        <div class="site-footer-bottom">
+            <p class="footer-legal-text">&copy; 2026 Performore. MSMC Limited Ltd (trading as Performore) is a company registered in England, company number 16695823.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="scripts/service-page.js"></script>
+    <script type="text/javascript">
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+      Cal("init", "25-mins-with-performore", {origin:"https://app.cal.com"});
+      Cal.config = Cal.config || {};
+      Cal.config.forwardQueryParams = true;
+      Cal.ns["25-mins-with-performore"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#7C2BBF"},"dark":{"cal-brand":"#7C2BBF"}},"hideEventTypeDetails":false,"layout":"month_view"});
+    </script>
+
+    <!-- Cookie consent (Google Consent Mode v2) -->
+    <script src="scripts/mobile-nav.js" defer></script>
+    <script src="scripts/consent.js" defer></script>
+
+</body>
+</html>
